@@ -1,17 +1,142 @@
-Topografía, Geodesia y Medición láser 3D
+1. Confiabilidad y MPd
 
-Ponemos a tu alcance alta tecnología, precisión y pasión
+Lema:
+Anticipamos errores y aseguramos el funcionamiento de tus equipos.
 
+Descripción:
+Analizamos datos para detectar anomalías en el funcionamiento de los equipos. Esto permite solucionar problemas antes de que ocurran, aumenta la vida útil de los equipos y reduce costos. Además aseguramos que los equipos puedan cumplir su función designada, durante un período establecido y bajo demandas.
+
+Alcance:
+
+Análisis Vibracional Convencional y Avanzado.
+
+Termografía Infrarroja
+
+Alineamiento de Máquinas: Ejes Colineales, Ejes Paralelos, Engranajes
+
+Monitoreo acústico.
+
+Verificaciones Geométricas con Láser: Planitud, Verticalidad, Paralelismo, Concetricidad.
+
+Balanceo Dinámico In Situ.
+
+Sistemas de monitoreo remoto institu
+
+Elongación de pernos en molino.
+
+Análisis de aceites
+
+2. Ensayos No Destructivos (END)
+
+Lema:
+Sin integridad no hay éxito.
+
+Descripción:
+Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto.
+
+Alcance:
+
+Inspección Visual
+
+Tintes Penetrantes
+
+Partículas Magnéticas
+
+Ultrasonido Convencional, Phased Array y TOFD
+
+Eddy Current y Eddy Current Array
+
+Magnetic Flux Leakage - MFL
+
+Radiografía industrial
+
+Otros: Dureza Superficial Portátil, Rugosidad.
+
+3. Inspección y Certificación de Equipos
+
+Lema:
+“No tenemos límites para la inspección de equipos”
+
+Descripción:
+Evaluamos el funcionamiento de equipos para identificar riesgos potenciales, fallas o defectos que puedan afectar la seguridad y la eficiencia de sus procesos.
+
+Alcance:
+
+Equipos de Izaje y Manejo de Cargas
+
+Recipientes a Presión
+
+Recipientes a Presión Atmosférica
+
+Pruebas Neumáticas
+
+4. Topografía, Geodesia y Medición Láser 3D
+
+Lema:
+Ponemos a tu alcance alta tecnología, precisión y pasión.
+
+Descripción:
 Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional. También realizamos mediciones en 3D con equipo láser tracker que permite medir con alta precisión las dimensiones de un objeto grande a través de la reflexión de la luz láser en dianas retroreflectoras colocadas sobre los puntos a medir.
+
+Alcance:
 
 Levantamiento Topográfico en General
 
 Medición de superficies topográficas
 
-Topografía en obra y construcción
+Topografía en obra y construcción.
 
-Colocación de puntos geodésicos
+Colocación de puntos geodésicos.
 
-Topografía con drones
+Topografía con drones.
 
-Medición 3D de estructuras con láser trucker
+Medición 3D de estructuras con láser trucker.
+
+5. Consultoría y Asesoramiento
+
+Lema:
+“Convertimos tu idea o proyecto en realidad”
+
+Descripción:
+Desarrollamos soluciones para tu empresa, trabajando juntos de la mejor manera de implementación e inversión.
+
+Alcance:
+
+Integridad Mecánica
+
+Planes de Inspección
+
+Aseguramiento y Control de Calidad de Proyectos Electromecánicos
+
+Sistemas de Monitoreo remoto inhouse
+
+6. Servicios Especializados
+
+Lema:
+“Somos los expertos”
+
+Descripción:
+Desarrollamos tus proyectos con eficiencia, seguridad y calidad.
+
+Alcance:
+
+Tratamiento Térmico
+
+Reparaciones y Montajes Críticos
+
+Mantenimiento de Grúas Puente y Polipastos
+
+Sistemas de Torque /Tensionado hidráulico controlado.
+
+Elaboración de procedimientos de soldadura (WPS), Registro de calificación (PQR)
+
+Venta y alquiler de Equipos de Inspección
+
+Gestión de Calibración Electrónica fuera de Perú
+
+
+6. Alquiler y Venta de Equipos & Calibraciones
+
+Venta y alquiler de Equipos de Inspección
+
+Gestión de Calibración Electrónica fuera de Perú

@@ -2,12 +2,12 @@
 
 <style>
 :root {
-    --dark-blue: #3f51b5;
+    --dark-blue: #2f4290;
     --teal: #26c6da;
     --bright-blue: #2196f3;
     --white: #ffffff;
-    --green: #4caf50;
-    --lime: #8bc34a;
+    --green: #0caf71;
+    --lime: #0caf71;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --light-bg: #f8fafc;
@@ -40,66 +40,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
-
-/* Hero Section */
-.hero-modern {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 3rem 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-modern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--teal);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    opacity: 0.1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    z-index: 2;
-    font-size: 0.9rem;
-}
-
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
 }
 
 /* Secciones */
@@ -185,104 +125,65 @@ body {
     margin: 0 auto;
 }
 
-/* Definición Destacada */
-.definition-section {
-    background: var(--card-bg);
-    border-radius: var(--border-radius-lg);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-medium);
-    border: 1px solid var(--border-color);
-    margin-bottom: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.definition-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--bright-blue);
-}
-
-.definition-section h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--dark-blue);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.definition-section h2::before {
-    content: '\f0e7';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    color: var(--bright-blue);
-    font-size: 1.5rem;
-}
-
-.definition-section p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.7;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Grid de Servicios */
 .services-grid-modern {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
 .service-card-modern {
     background: var(--card-bg);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius);
     padding: 2.5rem;
     box-shadow: var(--shadow-soft);
     border: 1px solid var(--border-color);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 320px;
+}
+
+.service-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card-modern:hover::before {
+    transform: scaleX(1);
 }
 
 .service-card-modern:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-medium);
-    border-color: var(--bright-blue);
 }
 
 .service-icon-modern {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
+    background: var(--green);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--bright-blue), var(--teal));
-    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
 }
 
 .service-icon-modern i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--white);
 }
 
 .service-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    text-align: left;
 }
 
 .service-content h3 {
@@ -291,6 +192,32 @@ body {
     color: var(--text-dark);
     margin-bottom: 1rem;
     line-height: 1.3;
+}
+
+.service-definition {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.service-definition .definition-content {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+.definition-card {
+    margin-bottom: 3rem;
+    border: 2px solid var(--accent-green);
+    background: linear-gradient(135deg, rgba(12, 175, 113, 0.05), rgba(47, 66, 144, 0.05));
+}
+
+.definition-card .service-icon-modern {
+    background: var(--accent-green);
+    color: white;
 }
 
 .service-tagline {
@@ -357,114 +284,6 @@ body {
     left: 0;
     color: var(--green);
     font-size: 0.9rem;
-}
-
-/* Servicios Complementarios */
-.complementary-services {
-    background: var(--card-bg);
-    border-radius: var(--border-radius-lg);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-medium);
-    border: 1px solid var(--border-color);
-    margin-bottom: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.complementary-services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--teal);
-}
-
-.complementary-services h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--dark-blue);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-}
-
-.complementary-services h3::before {
-    content: '\f085';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    color: var(--bright-blue);
-    font-size: 1.3rem;
-}
-
-.complementary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.complementary-item {
-    padding: 2rem;
-    background: var(--light-bg);
-    border-radius: var(--border-radius);
-    border-left: 5px solid var(--bright-blue);
-    transition: var(--transition);
-}
-
-.complementary-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-soft);
-    border-left-color: var(--teal);
-}
-
-.complementary-item h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.complementary-item:nth-child(1) h4::before { 
-    content: '\f0e4'; 
-    font-family: 'Font Awesome 6 Free'; 
-    font-weight: 900; 
-    color: var(--bright-blue); 
-    font-size: 1.1rem; 
-}
-
-.complementary-item:nth-child(2) h4::before { 
-    content: '\f1fc'; 
-    font-family: 'Font Awesome 6 Free'; 
-    font-weight: 900; 
-    color: var(--teal); 
-    font-size: 1.1rem; 
-}
-
-.complementary-item .description,
-.complementary-item .scope {
-    margin-bottom: 1rem;
-}
-
-.complementary-item .description strong,
-.complementary-item .scope strong {
-    color: var(--bright-blue);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.complementary-item p {
-    color: var(--text-light);
-    line-height: 1.6;
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
 }
 
 /* Sección de Beneficios */
@@ -556,23 +375,11 @@ body {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .services-grid-modern {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .hero-modern {
-        padding: 2rem 0;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
     .services-modern {
         padding: 3rem 0;
     }
@@ -596,12 +403,12 @@ body {
     }
     
     .service-icon-modern {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
     
     .service-icon-modern i {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .definition-section,
@@ -621,10 +428,6 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 0.5rem;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
     }
     
     .service-card-modern {
@@ -688,39 +491,20 @@ html {
 </style>
 
 <main>
-    <section class="hero-modern">
-        <div class="hero-background">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-microscope"></i>
-                    Tecnología de Vanguardia
-                </div>
-                <h1 class="hero-title">Ensayos No Destructivos</h1>
-                <p class="hero-description">Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto mediante técnicas especializadas y normativas internacionales</p>
-            </div>
-        </div>
-    </section>
+    <?php 
+    // Configuración del hero para esta página
+    $title = "Ensayos No Destructivos";
+    $description = "Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto mediante técnicas especializadas y normativas internacionales";
+    $backgroundImage = "assets/img/servicios/3.jpg";
+    
+    // Incluir el componente hero
+    include __DIR__ . '/../includes/hero-service.php';
+    ?>
 
     <section class="services-modern">
         <div class="container">
-            <div class="definition-section">
-                <h2>¿Qué son los END?</h2>
-                <p>Los Ensayos No Destructivos son técnicas especializadas que nos permiten evaluar la integridad y las propiedades de materiales o componentes sin dañar el objeto de inspección, preservando su funcionalidad y valor operacional.</p>
-            </div>
 
             <div class="section-header-modern">
-                <div class="section-badge">
-                    <i class="fas fa-cogs"></i>
-                    Métodos Especializados
-                </div>
                 <h2 class="section-title">Técnicas de Inspección Avanzadas</h2>
                 <p class="section-subtitle">Aplicamos los métodos más efectivos según las necesidades específicas de cada proyecto</p>
             </div>
@@ -821,15 +605,16 @@ html {
                 </div>
             </div>
 
-            <div class="complementary-services">
-                <h3>Servicios Complementarios</h3>
-                <div class="complementary-grid">
-                    <div class="complementary-item">
-                        <h4>Dureza Superficial Portátil, Rugosidad.</h4>
-                        <div class="description">
-                            <strong>Descripción:</strong>
-                            <p>Dureza: es una prueba que evalúa la resistencia de un material a ser rayado o penetrado. Es una herramienta portátil útil para determinar si un material es adecuado para un propósito específico.</p>
-                            <p>Rugosidad: La inspección de rugosidad evalúa la textura de una superficie. Identifica defectos de la superficie, su gravedad y el impacto en el material evaluado.</p>
+            <div class="service-card-modern">
+                <div class="service-icon-modern">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Servicios Complementarios</h3>
+                    <div class="service-definition">
+                        <div class="definition-content">
+                            <strong>Dureza Superficial Portátil, Rugosidad:</strong>
+                            Dureza: es una prueba que evalúa la resistencia de un material a ser rayado o penetrado. Es una herramienta portátil útil para determinar si un material es adecuado para un propósito específico. Rugosidad: La inspección de rugosidad evalúa la textura de una superficie. Identifica defectos de la superficie, su gravedad y el impacto en el material evaluado.
                         </div>
                     </div>
                 </div>

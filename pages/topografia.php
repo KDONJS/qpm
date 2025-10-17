@@ -1,75 +1,39 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root {
-    --dark-blue: #3f51b5;
+    --dark-blue: #2f4290;
     --teal: #26c6da;
     --bright-blue: #2196f3;
     --white: #ffffff;
-    --green: #4caf50;
-    --lime: #8bc34a;
+    --green: #0caf71;
+    --lime: #0caf71;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
 }
 
-.page-hero {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 5rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--teal);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    opacity: 0.1;
-}
-
-.page-hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.page-hero .subtitle {
-    font-size: 1.4rem;
-    font-weight: 600;
-    background: rgba(38, 198, 218, 0.15);
-    color: var(--teal);
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(38, 198, 218, 0.2);
-    border: 2px solid rgba(38, 198, 218, 0.3);
-    position: relative;
-    z-index: 2;
-}
-
-.page-hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-}
-
-.main-content {
-    padding: 5rem 0;
-    background: var(--light-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
 }
 
 .container {
@@ -78,12 +42,21 @@
     padding: 0 1rem;
 }
 
-.services-section {
-    text-align: center;
-    margin-bottom: 5rem;
+/* Secciones */
+.services-modern {
+    padding: 4rem 0;
+    background: var(--light-bg);
 }
 
-.services-section h2 {
+.section-header-modern {
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-header-modern h2 {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--dark-blue);
@@ -91,7 +64,7 @@
     position: relative;
 }
 
-.services-section h2::after {
+.section-header-modern h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -103,83 +76,120 @@
     border-radius: 2px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-top: 4rem;
+.section-header-modern p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.service-card {
-    background: var(--white);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s ease;
+/* Grid de Servicios */
+.services-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-card-modern {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
-    text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.service-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
-.service-card h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
+.service-card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-icon-modern {
+    width: 70px;
+    height: 70px;
+    background: var(--green);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.service-icon-modern i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.service-content {
+    text-align: left;
+}
+
+.service-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    display: block;
-    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
-
-/* Eliminamos todos los estilos de iconos ::before */
-/* .service-card:nth-child(1) h3::before,
-.service-card:nth-child(2) h3::before,
-.service-card:nth-child(3) h3::before,
-.service-card:nth-child(4) h3::before,
-.service-card:nth-child(5) h3::before,
-.service-card:nth-child(6) h3::before {
-    display: none;
-} */
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .services-grid-modern {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
-    .page-hero {
+    .services-modern {
         padding: 3rem 0;
     }
     
-    .page-hero h1 {
-        font-size: 2.2rem;
+    .section-header-modern {
+        margin-bottom: 3rem;
     }
     
-    .page-hero .subtitle {
-        font-size: 1.2rem;
-        padding: 0.5rem 1.5rem;
-    }
-    
-    .page-hero p {
-        font-size: 1.1rem;
-    }
-    
-    .main-content {
-        padding: 3rem 0;
-    }
-    
-    .services-section h2 {
+    .section-header-modern h2 {
         font-size: 2rem;
-        margin-bottom: 2rem;
     }
     
-    .services-grid {
+    .services-grid-modern {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
     
-    .service-card {
-        padding: 2rem 1.5rem;
+    .service-card-modern {
+        padding: 2rem;
+        min-height: auto;
+    }
+    
+    .service-icon-modern {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon-modern i {
+        font-size: 1.5rem;
     }
 }
 
@@ -188,56 +198,125 @@
         padding: 0 0.5rem;
     }
     
-    .page-hero h1 {
-        font-size: 1.8rem;
+    .service-card-modern {
+        padding: 1.5rem;
     }
     
-    .page-hero .subtitle {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+    .service-icon-modern {
+        width: 60px;
+        height: 60px;
     }
     
-    .service-card {
-        padding: 1.5rem 1rem;
+    .service-icon-modern i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card-modern {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.service-card-modern:nth-child(1) { animation-delay: 0.1s; }
+.service-card-modern:nth-child(2) { animation-delay: 0.2s; }
+.service-card-modern:nth-child(3) { animation-delay: 0.3s; }
+.service-card-modern:nth-child(4) { animation-delay: 0.4s; }
+.service-card-modern:nth-child(5) { animation-delay: 0.5s; }
+.service-card-modern:nth-child(6) { animation-delay: 0.6s; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 </style>
 
 <main>
-    <section class="page-hero">
-        <div class="container">
-            <h1>Topografía, Geodesia y Medición láser 3D</h1>
-            <p class="subtitle">Ponemos a tu alcance alta tecnología, precisión y pasión</p>
-            <p>Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional. También realizamos mediciones en 3D con equipo láser tracker que permite medir con alta precisión las dimensiones de un objeto grande a través de la reflexión de la luz láser en dianas retroreflectoras colocadas sobre los puntos a medir.</p>
-        </div>
-    </section>
+    <?php 
+    // Configuración del hero para esta página
+    $title = "Topografía, Geodesia y Medición láser 3D";
+    $description = "Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional. También realizamos mediciones en 3D con equipo láser tracker que permite medir con alta precisión las dimensiones de un objeto grande a través de la reflexión de la luz láser en dianas retroreflectoras colocadas sobre los puntos a medir.";
+    $badge = "Ponemos a tu alcance alta tecnología, precisión y pasión";
+    $backgroundImage = "assets/img/servicios/4.jpg";
+    
+    // Incluir el componente hero
+    include __DIR__ . '/../includes/hero-service.php';
+    ?>
 
-    <section class="main-content">
+    <section class="services-modern">
         <div class="container">
-            <div class="services-section">
+            <div class="section-header-modern">
                 <h2>Servicios Especializados</h2>
-                <div class="services-grid">
-                    <div class="service-card">
+            </div>
+            
+            <div class="services-grid-modern">
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Levantamiento Topográfico en General</h3>
                     </div>
-                    
-                    <div class="service-card">
+                </div>
+                
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Medición de superficies topográficas</h3>
                     </div>
-                    
-                    <div class="service-card">
+                </div>
+                
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Topografía en obra y construcción</h3>
                     </div>
-                    
-                    <div class="service-card">
+                </div>
+                
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Colocación de puntos geodésicos</h3>
                     </div>
-                    
-                    <div class="service-card">
+                </div>
+                
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-drone"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Topografía con drones</h3>
                     </div>
-                    
-                    <div class="service-card">
+                </div>
+                
+                <div class="service-card-modern">
+                    <div class="service-icon-modern">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="service-content">
                         <h3>Medición 3D de estructuras con láser trucker</h3>
                     </div>
                 </div>

@@ -1,12 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 <main>
-    <section class="page-hero">
-        <div class="container">
-            <h1>Nuestro Equipo</h1>
-            <p>Profesionales multidisciplinarios con amplia experiencia nacional e internacional</p>
-        </div>
-    </section>
+    <?php 
+    // Configuración del hero para esta página
+    $title = "Nuestro Equipo";
+    $description = "Profesionales multidisciplinarios con amplia experiencia nacional e internacional";
+    $backgroundImage = "assets/img/nosotros/1.jpg";
+    
+    // Incluir el componente hero
+    include __DIR__ . '/../includes/hero-service.php';
+    ?>
 
     <section class="team-content">
         <div class="container">
@@ -134,58 +137,25 @@
 
 <style>
 :root {
-    --dark-blue: #3f51b5;
+    --dark-blue: #2f4290;
     --teal: #26c6da;
     --bright-blue: #2196f3;
     --white: #ffffff;
-    --green: #4caf50;
-    --lime: #8bc34a;
+    --green: #0caf71;
+    --lime: #0caf71;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --light-bg: #f8fafc;
-}
-
-.page-hero {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 5rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--teal);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    opacity: 0.1;
-}
-
-.page-hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.page-hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.team-content {
-    padding: 5rem 0;
-    background: var(--light-bg);
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
 }
 
 .container {
@@ -203,6 +173,7 @@
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--dark-blue);
+    margin-top: 2rem;
     margin-bottom: 2rem;
     position: relative;
 }

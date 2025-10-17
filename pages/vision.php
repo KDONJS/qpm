@@ -1,12 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 <main>
-    <section class="page-hero">
-        <div class="container">
-            <h1>Visión y Misión</h1>
-            <p>Nuestros valores y objetivos que guían cada uno de nuestros servicios</p>
-        </div>
-    </section>
+    <?php 
+    // Configuración del hero para esta página
+    $title = "Visión y Misión";
+    $description = "Nuestros valores y objetivos que guían cada uno de nuestros servicios";
+    $backgroundImage = "assets/img/nosotros/2.jpg";
+    
+    // Incluir el componente hero
+    include __DIR__ . '/../includes/hero-service.php';
+    ?>
 
     <section class="vision-mission-content">
         <div class="container">
@@ -74,53 +77,25 @@
 
 <style>
 :root {
-    --dark-blue: #3f51b5;
+    --dark-blue: #2f4290;
     --teal: #26c6da;
     --bright-blue: #2196f3;
     --white: #ffffff;
-    --green: #4caf50;
-    --lime: #8bc34a;
+    --green: #0caf71;
+    --lime: #0caf71;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --light-bg: #f8fafc;
-}
-
-.page-hero {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 5rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--teal);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    opacity: 0.1;
-}
-
-.page-hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.page-hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
 }
 
 .container {
@@ -143,23 +118,23 @@
 .vision-card, .mission-card {
     background: var(--white);
     padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
     text-align: center;
-    transition: all 0.4s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
 
 .vision-card:hover, .mission-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-strong);
 }
 
 .card-icon {
     width: 100px;
     height: 100px;
-    border-radius: 20px;
+    border-radius: var(--border-radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,21 +226,21 @@
     gap: 1.5rem;
     background: var(--light-bg);
     padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
     overflow: hidden;
 }
 
 .value-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-medium);
 }
 
 .value-icon {
     width: 70px;
     height: 70px;
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,8 +305,8 @@
 .commitment-content {
     background: var(--white);
     padding: 4rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -366,22 +341,22 @@
     gap: 1.5rem;
     background: var(--light-bg);
     padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
     overflow: hidden;
     text-align: center;
 }
 
 .commitment-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-medium);
 }
 
 .commitment-icon {
     width: 70px;
     height: 70px;
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;

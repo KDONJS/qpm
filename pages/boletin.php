@@ -1,79 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 <main>
-    <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Boletín y Noticias</h1>
-            <p>Mantente informado sobre las últimas novedades, avances tecnológicos y actualizaciones del sector industrial</p>
-        </div>
-    </section>
+    <?php 
+    // Configuración del hero para esta página
+    $title = "Boletín";
+    $description = "Mantente informado sobre las últimas novedades, avances tecnológicos y actualizaciones del sector industrial";
+    
+    // Incluir el componente hero
+    include __DIR__ . '/../includes/hero-service.php';
+    ?>
 
-    <!-- Sección de Boletines Destacados -->
-    <section class="featured-bulletins">
-        <div class="container">
-            <h2 class="section-title">Boletines Destacados</h2>
-            <div class="bulletins-grid">
-                <div class="bulletin-card featured">
-                    <div class="bulletin-header">
-                        <i class="fas fa-file-pdf bulletin-icon"></i>
-                        <div class="bulletin-meta">
-                            <span class="bulletin-type">Boletín Técnico</span>
-                            <span class="bulletin-date">Enero 2024</span>
-                        </div>
-                    </div>
-                    <h3>Avances en Ensayos No Destructivos 2024</h3>
-                    <p>Nuevas tecnologías en ultrasonido phased array, radiografía digital y termografía infrarroja para la industria minera y petroquímica.</p>
-                    <div class="bulletin-actions">
-                        <a href="#" class="btn-primary">
-                            <i class="fas fa-download"></i>
-                            Descargar PDF
-                        </a>
-                        <a href="#" class="btn-secondary">
-                            <i class="fas fa-eye"></i>
-                            Vista previa
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bulletin-card">
-                    <div class="bulletin-header">
-                        <i class="fas fa-certificate bulletin-icon"></i>
-                        <div class="bulletin-meta">
-                            <span class="bulletin-type">Certificación</span>
-                            <span class="bulletin-date">Diciembre 2023</span>
-                        </div>
-                    </div>
-                    <h3>QPM Obtiene Certificación ISO 17025</h3>
-                    <p>Reconocimiento internacional para laboratorios de ensayo y calibración, fortaleciendo nuestro compromiso con la calidad.</p>
-                    <div class="bulletin-actions">
-                        <a href="#" class="btn-primary">
-                            <i class="fas fa-download"></i>
-                            Descargar
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bulletin-card">
-                    <div class="bulletin-header">
-                        <i class="fas fa-industry bulletin-icon"></i>
-                        <div class="bulletin-meta">
-                            <span class="bulletin-type">Caso de Estudio</span>
-                            <span class="bulletin-date">Noviembre 2023</span>
-                        </div>
-                    </div>
-                    <h3>Inspección de Grúas Puente en Minería</h3>
-                    <p>Análisis detallado de metodologías aplicadas en la inspección y certificación de equipos de izaje en operaciones mineras.</p>
-                    <div class="bulletin-actions">
-                        <a href="#" class="btn-primary">
-                            <i class="fas fa-download"></i>
-                            Descargar
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Sección de Noticias Recientes -->
     <section class="recent-news">
@@ -87,9 +23,18 @@
                         <span class="year">2024</span>
                     </div>
                     <div class="news-content">
-                        <h3>Expansión de Servicios de Topografía con Drones</h3>
-                        <p>QPM incorpora tecnología de drones avanzados para levantamientos topográficos de alta precisión, optimizando tiempos y mejorando la seguridad en proyectos de gran escala.</p>
-                        <a href="#" class="news-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        <h3>Visita Estratégica a GOLD FIELDS - Fortaleciendo Alianzas</h3>
+                        <p>En QPM SAC PERÚ compartimos lo que fue nuestra visita a nuestro socio estratégico GOLD FIELDS, una valiosa oportunidad para seguir potenciándonos como equipo y elevar continuamente nuestros estándares de prestación de servicios en Mantenimiento Predictivo (MPD), Ensayos No Destructivos (NDT) y Confiabilidad de Equipos de Planta y Procesos.</p>
+                        <div class="news-tags">
+                            <span class="tag">#MantenimientoPredictivo</span>
+                            <span class="tag">#NDT</span>
+                            <span class="tag">#Confiabilidad</span>
+                            <span class="tag">#IndustriaMinera</span>
+                        </div>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7350909494236696582" target="_blank" class="news-link">
+                            <i class="fab fa-linkedin"></i>
+                            Ver en LinkedIn <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -100,24 +45,21 @@
                         <span class="year">2024</span>
                     </div>
                     <div class="news-content">
-                        <h3>Nuevo Laboratorio de Calibración Electrónica</h3>
-                        <p>Inauguración de nuestras nuevas instalaciones para calibración de equipos electrónicos, ampliando nuestra capacidad de servicio a nivel nacional e internacional.</p>
-                        <a href="#" class="news-link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        <h3>Charla Especializada: Normativa de Inspección de Equipos de Izaje</h3>
+                        <p>Como parte del valor agregado que ofrecemos a nuestros socios estratégicos como Aceros Arequipa, organizamos una charla especializada sobre "Normativa Aplicable a la Inspección de Equipos de Izaje y manejo de Cargas", en colaboración con C3PERU CAPACITACION. Este tipo de iniciativas refuerzan nuestro compromiso con la seguridad, la formación continua y la excelencia operativa en entornos industriales.</p>
+                        <div class="news-tags">
+                            <span class="tag">#SeguridadIndustrial</span>
+                            <span class="tag">#IzajeDeCargas</span>
+                            <span class="tag">#CapacitaciónIndustrial</span>
+                            <span class="tag">#QPM</span>
+                        </div>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7321548567720955905/" target="_blank" class="news-link">
+                            <i class="fab fa-linkedin"></i>
+                            Ver en LinkedIn <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">22</span>
-                        <span class="month">DIC</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Participación en Congreso Internacional de Metrología</h3>
-                        <p>Nuestro equipo técnico presenta ponencias sobre innovaciones en medición láser 3D y sistemas de monitoreo remoto en el Congreso Internacional de Lima.</p>
-                        <a href="#" class="news-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -126,37 +68,40 @@
 
 <style>
 :root {
-    --primary-color: #2c5aa0;
-    --secondary-color: #1e3d72;
-    --accent-color: #4a90e2;
-    --light-blue: #e8f4fd;
-    --text-dark: #2c3e50;
-    --text-light: #6c757d;
+    --dark-blue: #2f4290;
+    --teal: #26c6da;
+    --bright-blue: #2196f3;
     --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --border-color: #e9ecef;
+    --green: #0caf71;
+    --lime: #0caf71;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
+    
+    /* Variables específicas para compatibilidad */
+    --primary-color: var(--dark-blue);
+    --secondary-color: var(--dark-blue);
+    --accent-color: var(--bright-blue);
+    --light-blue: #e8f4fd;
+    --light-gray: var(--light-bg);
     --success-color: #28a745;
     --warning-color: #ffc107;
 }
 
-.page-hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.page-hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.page-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .section-title {
@@ -193,16 +138,16 @@
 
 .bulletin-card {
     background: var(--white);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
     border: 1px solid var(--border-color);
 }
 
 .bulletin-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-medium);
 }
 
 .bulletin-card.featured {
@@ -300,7 +245,7 @@
     text-align: center;
     margin-right: 2rem;
     background: var(--light-blue);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 1rem 0.5rem;
 }
 
@@ -337,6 +282,22 @@
     margin-bottom: 1rem;
 }
 
+.news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: var(--light-blue);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 .news-link {
     color: var(--accent-color);
     text-decoration: none;
@@ -349,6 +310,11 @@
 
 .news-link:hover {
     color: var(--primary-color);
+}
+
+.news-link .fab {
+    color: #0077b5;
+    font-size: 1.1rem;
 }
 
 /* Eventos */
@@ -365,16 +331,17 @@
 
 .event-card {
     background: var(--white);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-soft);
     display: flex;
     gap: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: var(--transition);
 }
 
 .event-card:hover {
     transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
 }
 
 .event-date {
@@ -383,7 +350,7 @@
     text-align: center;
     background: var(--primary-color);
     color: var(--white);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 1rem 0.5rem;
 }
 
@@ -456,7 +423,7 @@
     flex: 1;
     padding: 1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
 }
 
@@ -480,10 +447,10 @@
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     cursor: pointer;
     font-size: 0.9rem;
 }
@@ -561,8 +528,14 @@
         flex-direction: column;
     }
     
-    .bulletin-actions {
+    .news-tags {
         justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
     }
 }
 
