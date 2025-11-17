@@ -45,87 +45,11 @@
             <h2>Nuestros Clientes</h2>
             <p>Empresas líderes que confían en nuestros servicios</p>
         </div>
-        
+        <style>
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc((var(--logo-width) + var(--logo-gap)) * var(--logo-count) * -1)); } }
+        </style>
         <div class="clients-carousel">
-            <div class="clients-track">
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/01 ACEROS AREQUIPA.jpg" alt="Aceros Arequipa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/02 CEMENTOS YURA.jpg" alt="Cementos Yura">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/03 COSAPI.png" alt="Cosapi">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/04 COSMOS.jpg" alt="Cosmos">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/05 EMEMSA.jpg" alt="Ememsa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/06 GIE GROUP.jpg" alt="GIE Group">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/07 GOLD FIELDS.jpg" alt="Gold Fields">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/08 HLC.png" alt="HLC">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/09 IDOM.jpg" alt="Idom">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/10 ITALMECAN.jpg" alt="Italmecan">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/11 KLAR.jpeg" alt="Klar">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/12 ORICA.jpg" alt="Orica">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/13 PESQUERA EXALMAR.png" alt="Pesquera Exalmar">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/14 RECOLSA.jpg" alt="Recolsa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/15 SANDVIK.jpg" alt="Sandvik">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/16 SEAMAR.jpg" alt="Seamar">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/17 TASA.jpg" alt="Tasa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/18 TERPEL.jpg" alt="Terpel">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/uplc.png" alt="UPLC">
-                </div>
-                
-                <!-- Duplicamos los logos para el efecto infinito -->
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/01 ACEROS AREQUIPA.jpg" alt="Aceros Arequipa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/02 CEMENTOS YURA.jpg" alt="Cementos Yura">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/03 COSAPI.png" alt="Cosapi">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/04 COSMOS.jpg" alt="Cosmos">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/05 EMEMSA.jpg" alt="Ememsa">
-                </div>
-                <div class="client-logo">
-                    <img src="<?php echo $basePath; ?>assets/img/clients/06 GIE GROUP.jpg" alt="GIE Group">
-                </div>
-            </div>
+            <?php include_once $basePath.'includes/clients-service.php'; $imgs = getClientImages(__DIR__.'/../assets/img/clients'); renderClientLogos($imgs, $basePath); ?>
         </div>
     </div>
 </section>

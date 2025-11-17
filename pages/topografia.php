@@ -305,7 +305,7 @@ html {
                 
                 <div class="service-card-modern">
                     <div class="service-icon-modern">
-                        <i class="fas fa-drone"></i>
+                        <i class="fa fa-plane" aria-hidden="true"></i>
                     </div>
                     <div class="service-content">
                         <h3>Topografía con drones</h3>
@@ -317,7 +317,7 @@ html {
                         <i class="fas fa-cube"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Medición 3D de estructuras con láser trucker</h3>
+                        <h3>Medición 3D de estructuras con láser tracker</h3>
                     </div>
                 </div>
             </div>
