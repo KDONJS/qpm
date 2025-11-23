@@ -515,10 +515,6 @@ html {
                         <p class="service-description">
                             Amplio inventario de equipos de inspección disponibles para alquiler con soporte técnico completo y mantenimiento incluido.
                         </p>
-                        <a href="#" class="service-link">
-                            <i class="fas fa-arrow-right"></i>
-                            Ver Catálogo
-                        </a>
                     </div>
                 </div>
 
@@ -531,10 +527,6 @@ html {
                         <p class="service-description">
                             Comercialización de equipos nuevos y usados con garantía, capacitación y soporte técnico post-venta especializado.
                         </p>
-                        <a href="#" class="service-link">
-                            <i class="fas fa-arrow-right"></i>
-                            Solicitar Cotización
-                        </a>
                     </div>
                 </div>
 
@@ -547,10 +539,6 @@ html {
                         <p class="service-description">
                             Servicios de calibración certificada para equipos de medición e inspección con trazabilidad internacional garantizada.
                         </p>
-                        <a href="#" class="service-link">
-                            <i class="fas fa-arrow-right"></i>
-                            Más Información
-                        </a>
                     </div>
                 </div>
             </div>

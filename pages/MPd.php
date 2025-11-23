@@ -100,8 +100,8 @@
     /* Grid de Servicios */
     .services-grid-modern {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(3, minmax(380px, 1fr));
+        gap: 1.5rem;
     }
 
     .service-card-modern {
@@ -310,25 +310,15 @@
             <div class="section-header-modern">
                 <h2>Servicios Especializados</h2>
                 <p>
-                    Ofrecemos soluciones integrales de mantenimiento predictivo y confiabilidad para plantas procesadoras, utilizando tecnología de vanguardia y metodologías probadas en la industria.
+                    Analizamos datos para detectar anomalías en el funcionamiento de los equipos. Esto permite solucionar problemas antes de que ocurran, lo que aumenta la vida útil de los equipos y reduce costos.
+                    Además aseguramos que los equipos puedan cumplir su función designada, durante un periodo establecido y bajo condiciones predeterminadas.
                 </p>
+            </div>
+            <div class="section-intro-left">
+                <h3 style="font-size:1.4rem;font-weight:700;color:var(--text-dark);line-height:1.3;">Gestión y Ejecución de la Confiabilidad y/o Mantenimiento Predictivo Plantas Procesadoras</h3>
             </div>
 
             <div class="services-grid-modern">
-                <!-- Gestión y Ejecución de la Confiabilidad -->
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Gestión y Ejecución de la Confiabilidad y/o Mantenimiento Predictivo</h3>
-                        <div class="service-definition">
-                            <div class="definition-content">
-                                Plantas Procesadoras
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Análisis Vibracional -->
                 <div class="service-card-modern">
@@ -354,7 +344,7 @@
                         <h3>Termografía Infrarroja</h3>
                         <div class="service-definition">
                             <div class="definition-content">
-                                La Termografía Infrarroja mide la temperatura de la superficie de los componentes eléctricos y mecámicos mediante un tecnologías de escaneo visual de infrarrojos altamente especializada. Para ello, utiliza una cámara sensible o una cámara térmica que es capaz de detectar la cantidad de energía infrarroja liberada por los objetos calientes.
+                                La Termografía Infrarroja mide la temperatura de la superficie de los componentes eléctricos y mecánicos mediante un tecnologías de escaneo visual de infrarrojos altamente especializada. Para ello, utiliza una cámara sensible o una cámara térmica que es capaz de detectar la cantidad de energía infrarroja liberada por los objetos.
                             </div>
                         </div>
                     </div>

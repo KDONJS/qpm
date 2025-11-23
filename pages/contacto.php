@@ -2,7 +2,6 @@
     <div class="container">
         <div class="section-header">
             <h1>Contáctenos</h1>
-            <p>Estamos aquí para ayudarte con tus necesidades de medición y certificación</p>
         </div>
         
         <div class="services-grid">

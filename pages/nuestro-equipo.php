@@ -4,8 +4,7 @@
     <?php 
     // Configuración del hero para esta página
     $title = "Nuestro Equipo";
-    $description = "Profesionales multidisciplinarios con amplia experiencia nacional e internacional";
-    $backgroundImage = "assets/img/nosotros/1.jpg";
+    $backgroundImage = "assets/img/equipo/WhatsApp Image 2025-08-28 at 10.45.52 AM.jpeg";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';
@@ -15,7 +14,11 @@
         <div class="container">
             <div class="team-intro">
                 <h2>Quiénes Somos</h2>
-                <p>Somos un equipo de profesionales multidisciplinarios con amplia experiencia en la industria nacional e internacional. Contamos con certificaciones internacionales como AWS, ASNT, Crane Institute, API, entre otras, que respaldan la calidad y excelencia de nuestros servicios.</p>
+                <p>Somos un equipo de profesionales multidisciplinarios con amplia experiencia en la industria nacional e internacional. Contamos con certificaciones internacionales como AWS, ASNT, Crane Institute, API, entre otras, que respaldan la calidad y excelencia de nuestros servicios.
+                    <br>
+                    <br>
+                     Desde febrero de 2015, hemos trabajado con compromiso y responsabilidad, brindando soluciones confiables e innovadoras que contribuyen al desarrollo sostenible de nuestros clientes en el sector minero e industrial.
+                </p>
                 
                 <div class="experience-highlight">
                     <div class="highlight-item">
@@ -35,6 +38,97 @@
         </div>
     </section>
 
+    <section class="vision-mission-content">
+        <div class="container">
+            <div class="vision-mission-grid">
+                <div class="vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser una empresa de crecimiento sólido, siendo la mejor alternativa de soporte y suministro de nuestros clientes en los sectores minería, energía, hidrocarburos e industria en general, nacional e internacionalmente.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Brindar soluciones innovadoras, flexibles e integrales alineadas a los objetivos estratégicos de nuestros clientes, así como establecer internamente estrategias orientadas a nuestro crecimiento sostenido y con ello el de nuestros colaboradores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="values-intro">
+                <h2>Valores</h2>
+                <p>Nuestros valores guían cada decisión y acción con excelencia, responsabilidad y enfoque en las personas.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="value-content">
+                        <h4>Excelencia</h4>
+                        <p>Buscamos superar las expectativas en cada proyecto con calidad y mejora continua.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="value-content">
+                        <h4>Responsabilidad</h4>
+                        <p>Actuamos con integridad y compromiso con la seguridad y el cumplimiento normativo.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="value-content">
+                        <h4>Innovación</h4>
+                        <p>Implementamos soluciones creativas y tecnológicas para desafíos complejos.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-people-carry"></i></div>
+                    <div class="value-content">
+                        <h4>Trabajo en Equipo</h4>
+                        <p>Impulsamos la colaboración y el desarrollo del talento de nuestros colaboradores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-commitment-section">
+        <div class="container">
+            <div class="vision-commitment-content">
+                <h2>Nuestro Compromiso con el Futuro</h2>
+                <p class="vision-commitment-description">Desde febrero de 2015, hemos demostrado nuestro compromiso con la excelencia y el crecimiento sostenible. Miramos hacia el futuro con la determinación de seguir siendo líderes en nuestro sector.</p>
+                <div class="vision-commitment-grid">
+                    <div class="vision-commitment-item">
+                        <div class="vision-commitment-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="vision-commitment-text">
+                            <h4>Crecimiento Sostenible</h4>
+                            <p>Desarrollamos estrategias que aseguran nuestro crecimiento a largo plazo mientras contribuimos al éxito de nuestros clientes y el desarrollo de nuestro equipo.</p>
+                        </div>
+                    </div>
+                    <div class="vision-commitment-item">
+                        <div class="vision-commitment-icon"><i class="fas fa-users"></i></div>
+                        <div class="vision-commitment-text">
+                            <h4>Desarrollo del Talento</h4>
+                            <p>Invertimos en la capacitación y crecimiento profesional de nuestros colaboradores, manteniendo las certificaciones más exigentes del mercado.</p>
+                        </div>
+                    </div>
+                    <div class="vision-commitment-item">
+                        <div class="vision-commitment-icon"><i class="fas fa-globe"></i></div>
+                        <div class="vision-commitment-text">
+                            <h4>Expansión Internacional</h4>
+                            <p>Trabajamos para consolidar nuestra presencia en mercados internacionales, llevando nuestra experiencia y calidad más allá de las fronteras nacionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Galería del Equipo -->
     <section class="team-gallery">
         <div class="container">
@@ -44,93 +138,84 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Imágenes del folder assets/img/equipo -->
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20240710_142812.jpg" alt="Equipo QPM 20240710_142812">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20240911_172653.jpg" alt="Equipo QPM 20240911_172653">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20240911_172657.jpg" alt="Equipo QPM 20240911_172657">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20241003_121130.jpg" alt="Equipo QPM 20241003_121130">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20241003_121131.jpg" alt="Equipo QPM 20241003_121131">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20241003_121214.jpg" alt="Equipo QPM 20241003_121214">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/20241003_121217.jpg" alt="Equipo QPM 20241003_121217">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/WhatsApp%20Image%202025-06-24%20at%206.32.30%20PM%20(1)%20(1).jpeg" alt="Equipo QPM WhatsApp 2025-06-24">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/WhatsApp%20Image%202025-07-02%20at%204.18.14%20PM%20(9)%20(1).jpeg" alt="Equipo QPM WhatsApp 2025-07-02">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/WhatsApp%20Image%202025-08-28%20at%2010.45.52%20AM%20(1).jpeg" alt="Equipo QPM WhatsApp 2025-08-28 (1)">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/equipo/WhatsApp%20Image%202025-08-28%20at%2010.45.52%20AM.jpeg" alt="Equipo QPM WhatsApp 2025-08-28">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
+                <?php include_once $basePath.'includes/clients-service.php'; $imgs = getClientImages(__DIR__.'/../assets/img/equipo'); $i=0; foreach ($imgs as $img) { $alt = 'Equipo QPM '.ucwords(strtolower(trim(pathinfo($img, PATHINFO_FILENAME)))); $url = $basePath.'assets/img/equipo/'.rawurlencode($img); echo '<div class="gallery-item" data-index="'.$i.'"><img src="'.$url.'" alt="'.$alt.'" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>'; $i++; } ?>
             </div>
         </div>
 
         <!-- Lightbox -->
         <div id="lightbox" class="lightbox" aria-hidden="true">
             <button class="lightbox-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
             <img id="lightbox-img" src="" alt="Imagen de la galería">
+            <button class="lightbox-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
     <script>
-    // Lightbox simple
     (function() {
-        const items = document.querySelectorAll('.gallery-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        const isMobile = () => (
+            window.matchMedia('(hover: none)').matches ||
+            window.matchMedia('(pointer: coarse)').matches ||
+            window.matchMedia('(max-width: 768px)').matches
+        );
+        let currentIndex = -1;
 
-        items.forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightbox.classList.add('open');
-                lightbox.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            });
-        });
+        function openAt(index) {
+            if (isMobile()) return;
+            const item = items[index];
+            if (!item) return;
+            const img = item.querySelector('img');
+            lightboxImg.src = img.src;
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            currentIndex = index;
+        }
 
         function closeLightbox() {
             lightbox.classList.remove('open');
             lightbox.setAttribute('aria-hidden', 'true');
+            lightboxImg.classList.remove('zoomed');
             lightboxImg.src = '';
             document.body.style.overflow = '';
+            currentIndex = -1;
+        }
+
+        function next() { if (items.length) openAt((currentIndex + 1) % items.length); }
+        function prev() { if (items.length) openAt((currentIndex - 1 + items.length) % items.length); }
+
+        if (!isMobile()) {
+            items.forEach((item, idx) => {
+                const overlay = item.querySelector('.gallery-overlay');
+                const handler = () => openAt(idx);
+                item.addEventListener('click', handler);
+                if (overlay) overlay.addEventListener('click', function(e) { e.stopPropagation(); handler(); });
+            });
         }
 
         closeBtn.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
+        prevBtn.addEventListener('click', function(e){ e.stopPropagation(); prev(); });
+        nextBtn.addEventListener('click', function(e){ e.stopPropagation(); next(); });
+
+        lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+        lightboxImg.addEventListener('click', function(e) { e.stopPropagation(); lightboxImg.classList.toggle('zoomed'); });
+
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
         });
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
+        let startX = 0;
+        lightbox.addEventListener('touchstart', function(e){ if(!lightbox.classList.contains('open')) return; startX = e.changedTouches[0].clientX; }, {passive:true});
+        lightbox.addEventListener('touchend', function(e){ if(!lightbox.classList.contains('open')) return; const dx = e.changedTouches[0].clientX - startX; if (Math.abs(dx) > 40) { if (dx < 0) next(); else prev(); } }, {passive:true});
     })();
     </script>
 </main>
@@ -618,6 +703,8 @@
     max-height: 85vh;
     border-radius: 12px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease;
+    user-select: none;
 }
 
 .lightbox-close {
@@ -638,6 +725,27 @@
     transform: scale(1.05);
 }
 
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+.lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.25); }
+.lightbox img.zoomed { transform: scale(1.25); }
+
 /* Responsive */
 @media (max-width: 768px) {
     .section-title-gallery {
@@ -646,11 +754,159 @@
     .gallery-item img {
         height: 200px;
     }
+    .gallery-item { cursor: default; }
+    .gallery-item .gallery-overlay { display: none; }
+    .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
+    .lightbox img { max-width: 95vw; max-height: 80vh; }
 }
 
 @media (max-width: 480px) {
     .gallery-item img {
         height: 180px;
     }
+    .lightbox-prev, .lightbox-next { width: 38px; height: 38px; }
+    .lightbox-close { top: 1rem; right: 1rem; }
+    .lightbox img { max-width: 96vw; max-height: 78vh; }
+}
+
+/* Desactivar interacción en dispositivos táctiles/coarse pointer */
+@media (hover: none), (pointer: coarse) {
+    .gallery-item { cursor: default; pointer-events: none; }
+    .gallery-item .gallery-overlay { display: none; }
+}
+
+.vision-mission-content {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+}
+
+.vision-card, .mission-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-card:hover, .mission-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-strong);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+}
+
+.vision-card .card-icon { background: rgba(33, 150, 243, 0.1); }
+.mission-card .card-icon { background: rgba(38, 198, 218, 0.1); }
+.card-icon i { font-size: 3rem; }
+.vision-card .card-icon i { color: var(--bright-blue); }
+.mission-card .card-icon i { color: var(--teal); }
+
+.vision-card h3, .mission-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.vision-card p, .mission-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.values-section { padding: 5rem 0; background: var(--white); }
+.values-intro { text-align: center; margin-bottom: 5rem; }
+.values-intro h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.values-intro h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+.values-intro p { font-size: 1.2rem; color: var(--text-light); line-height: 1.8; max-width: 900px; margin: 0 auto; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+.value-item { display: flex; align-items: flex-start; gap: 1.5rem; background: var(--light-bg); padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-soft); transition: var(--transition); overflow: hidden; }
+.value-item:hover { transform: translateY(-8px); box-shadow: var(--shadow-medium); }
+.value-icon { width: 70px; height: 70px; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+.value-item:nth-child(1) .value-icon { background: rgba(33, 150, 243, 0.1); }
+.value-item:nth-child(2) .value-icon { background: rgba(76, 175, 80, 0.1); }
+.value-item:nth-child(3) .value-icon { background: rgba(38, 198, 218, 0.1); }
+.value-item:nth-child(4) .value-icon { background: rgba(139, 195, 74, 0.1); }
+.value-icon i { font-size: 2.2rem; }
+.value-item:nth-child(1) .value-icon i { color: var(--bright-blue); }
+.value-item:nth-child(2) .value-icon i { color: var(--green); }
+.value-item:nth-child(3) .value-icon i { color: var(--teal); }
+.value-item:nth-child(4) .value-icon i { color: var(--lime); }
+.value-content h4 { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.8rem; }
+.value-content p { color: var(--text-light); line-height: 1.7; margin: 0; font-size: 1rem; }
+
+.vision-commitment-section { padding: 5rem 0; }
+.vision-commitment-content { background: var(--white); padding: 4rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-soft); text-align: center; position: relative; overflow: hidden; }
+.vision-commitment-content h2 { font-size: 2.2rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 2rem; }
+.vision-commitment-description { font-size: 1.2rem; color: var(--text-light); line-height: 1.8; max-width: 900px; margin: 0 auto 4rem; }
+.vision-commitment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; text-align: left; }
+.vision-commitment-item { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; background: var(--light-bg); padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-soft); transition: var(--transition); overflow: hidden; text-align: center; }
+.vision-commitment-item:hover { transform: translateY(-8px); box-shadow: var(--shadow-medium); }
+.vision-commitment-icon { width: 70px; height: 70px; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+.vision-commitment-item:nth-child(1) .vision-commitment-icon { background: rgba(33, 150, 243, 0.1); }
+.vision-commitment-item:nth-child(2) .vision-commitment-icon { background: rgba(76, 175, 80, 0.1); }
+.vision-commitment-item:nth-child(3) .vision-commitment-icon { background: rgba(38, 198, 218, 0.1); }
+.vision-commitment-icon i { font-size: 2.2rem; }
+.vision-commitment-item:nth-child(1) .vision-commitment-icon i { color: var(--bright-blue); }
+.vision-commitment-item:nth-child(2) .vision-commitment-icon i { color: var(--green); }
+.vision-commitment-item:nth-child(3) .vision-commitment-icon i { color: var(--teal); }
+.vision-commitment-text h4 { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.8rem; }
+.vision-commitment-text p { color: var(--text-light); line-height: 1.7; margin: 0; font-size: 1rem; }
+
+@media (max-width: 768px) {
+    .vision-mission-content, .values-section, .vision-commitment-section { padding: 3rem 0; }
+    .vision-mission-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .vision-card, .mission-card { padding: 2.5rem; }
+    .card-icon { width: 80px; height: 80px; }
+    .card-icon i { font-size: 2.5rem; }
+    .values-intro h2 { font-size: 2rem; }
+    .values-grid, .vision-commitment-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .value-item, .vision-commitment-item { padding: 2rem; gap: 1rem; }
+    .value-icon, .vision-commitment-icon { width: 60px; height: 60px; }
+    .value-icon i, .vision-commitment-icon i { font-size: 1.8rem; }
+    .vision-commitment-content { padding: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+    .vision-card, .mission-card { padding: 2rem; }
+    .value-item, .vision-commitment-item { flex-direction: column; text-align: center; gap: 1rem; }
+    .value-icon, .vision-commitment-icon { margin: 0 auto; width: 70px; height: 70px; }
+    .value-icon i, .vision-commitment-icon i { font-size: 2rem; }
+    .vision-commitment-content { padding: 2rem 1.5rem; }
 }
 </style>

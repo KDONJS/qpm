@@ -10,7 +10,7 @@
 
 // Valores por defecto si no se pasan parámetros
 $title = $title ?? 'Nuestros Servicios';
-$description = $description ?? 'Soluciones profesionales para tu empresa';
+$description = $description ?? '';
 $badge = $badge ?? null;
 $backgroundImage = $backgroundImage ?? null;
 ?>

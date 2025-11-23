@@ -509,7 +509,14 @@ html {
                 <p class="section-subtitle">Aplicamos los métodos más efectivos según las necesidades específicas de cada proyecto</p>
             </div>
 
-            <div class="services-grid-modern">
+            <style>
+            .services-grid-modern.two-cols { grid-template-columns: repeat(2, minmax(420px, 1fr)); gap: 2rem; }
+            .services-grid-modern.two-cols .service-card-modern { min-height: 420px; }
+            @media (max-width: 1200px) { .services-grid-modern.two-cols { grid-template-columns: repeat(2, minmax(360px, 1fr)); } }
+            @media (max-width: 768px) { .services-grid-modern.two-cols { grid-template-columns: 1fr; } .services-grid-modern.two-cols .service-card-modern { min-height: auto; } }
+            </style>
+
+            <div class="services-grid-modern two-cols">
                 <div class="service-card-modern">
                     <div class="service-icon-modern">
                         <i class="fas fa-eye"></i>
@@ -610,7 +617,7 @@ html {
                     <i class="fas fa-tools"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Servicios Complementarios</h3>
+                    <h3>Dureza superficial portátil rugosidad</h3>
                     <div class="service-definition">
                         <div class="definition-content">
                             <strong>Dureza Superficial Portátil, Rugosidad:</strong>

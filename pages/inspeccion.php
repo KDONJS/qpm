@@ -396,9 +396,7 @@ html {
             <div class="section-header-modern">
                 
                 <h2 class="section-title">Inspección Integral de Equipos</h2>
-                <p class="section-subtitle">
-                    Ofrecemos inspecciones integrales con tecnología avanzada, personal certificado y cumplimiento de normativas internacionales para garantizar la seguridad operativa
-                </p>
+
             </div>
 
             <div class="services-grid-modern">
@@ -476,7 +474,7 @@ html {
                 <!-- Tanques de Almacenamiento sobre suelo -->
                 <div class="service-card-modern">
                     <div class="service-icon-modern">
-                        <i class="fas fa-container-storage"></i>
+                        <i class="fas fa-warehouse"></i>
                     </div>
                     <div class="service-content">
                         <h3>Tanques de Almacenamiento sobre suelo</h3>
@@ -510,7 +508,7 @@ html {
                 <!-- Sistemas de Tubería -->
                 <div class="service-card-modern">
                     <div class="service-icon-modern">
-                        <i class="fas fa-pipe"></i>
+                        <i class="fas fa-water"></i>
                     </div>
                     <div class="service-content">
                         <h3>Sistemas de Tubería</h3>

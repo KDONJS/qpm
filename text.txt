@@ -1,0 +1,3 @@
+DESCRIPCIÓN
+Analizamos datos para detectar anomalías en el funcionamiento de los equipos. Esto permite solucionar problemas antes de que ocurran, lo que aumenta la vida útil de los equipos y reduce costos.
+Además aseguramos que los equipos puedan cumplir su función designada, durante un periodo establecido y bajo condiciones predeterminadas.

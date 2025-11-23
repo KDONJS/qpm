@@ -4,8 +4,6 @@
     <?php 
     // Configuración del hero para esta página
     $title = "Boletín";
-    $description = "Mantente informado sobre las últimas novedades, avances tecnológicos y actualizaciones del sector industrial";
-    
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';
     ?>
@@ -19,8 +17,8 @@
                 <div class="news-item">
                     <div class="news-date">
                         <span class="day">15</span>
-                        <span class="month">ENE</span>
-                        <span class="year">2024</span>
+                        <span class="month">Julio</span>
+                        <span class="year">2025</span>
                     </div>
                     <div class="news-content">
                         <h3>Visita Estratégica a GOLD FIELDS - Fortaleciendo Alianzas</h3>
@@ -40,9 +38,9 @@
 
                 <div class="news-item">
                     <div class="news-date">
-                        <span class="day">08</span>
-                        <span class="month">ENE</span>
-                        <span class="year">2024</span>
+                        <span class="day">15</span>
+                        <span class="month">Junio</span>
+                        <span class="year">2025</span>
                     </div>
                     <div class="news-content">
                         <h3>Charla Especializada: Normativa de Inspección de Equipos de Izaje</h3>

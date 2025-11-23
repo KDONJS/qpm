@@ -31,13 +31,7 @@ $basePath = (basename(dirname($_SERVER['PHP_SELF'])) == 'pages') ? '../' : '';
                 <!-- Menú Desktop -->
                 <ul class="nav-menu">
                     <li><a href="<?php echo $basePath; ?>?page=inicio" class="nav-link">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-link">Nosotros</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="<?php echo $basePath; ?>?page=nuestro-equipo" class="nav-link">Nuestro Equipo</a></li>
-                            <li class="dropdown-item"><a href="<?php echo $basePath; ?>?page=vision" class="nav-link">Visión y Misión</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="<?php echo $basePath; ?>?page=nuestro-equipo" class="nav-link">Nosotros</a></li>
                     <li class="dropdown">
                         <a href="#" class="nav-link">Servicios</a>
                         <ul class="dropdown-menu">

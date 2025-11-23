@@ -7,13 +7,8 @@
 <section class="hero-modern" id="hero-carousel">
     <!-- Carrusel de imágenes de fondo -->
     <div class="hero-carousel">
-        <div class="hero-slide active" style="background-image: url('<?php echo $basePath; ?>assets/img/hero/1.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('<?php echo $basePath; ?>assets/img/hero/2.jpeg');"></div>
-        <div class="hero-slide" style="background-image: url('<?php echo $basePath; ?>assets/img/hero/3.jpeg');"></div>
+        <?php include_once $basePath.'includes/clients-service.php'; $slides = getClientImages(__DIR__.'/../assets/img/hero'); $i=0; foreach ($slides as $img) { $url = $basePath.'assets/img/hero/'.rawurlencode($img); $active = $i===0 ? ' active' : ''; echo '<div class="hero-slide'.$active.'" style="background-image: url(\''.$url.'\');"></div>'; $i++; } ?>
     </div>
-    
-    <!-- Overlay para mejor legibilidad -->
-    <div class="hero-overlay"></div>
     
     <div class="container">
         <div class="hero-content">
@@ -22,9 +17,7 @@
     
     <!-- Indicadores del carrusel -->
     <div class="carousel-indicators">
-        <button class="indicator active" data-slide="0"></button>
-        <button class="indicator" data-slide="1"></button>
-        <button class="indicator" data-slide="2"></button>
+        <?php $count = isset($slides) ? count($slides) : 0; for ($j=0; $j<$count; $j++) { $active = $j===0 ? ' active' : ''; echo '<button class="indicator'.$active.'" data-slide="'.$j.'"></button>'; } ?>
     </div>
     
     <!-- Controles del carrusel -->
@@ -64,12 +57,26 @@
                 Ponemos a su disposición servicios de valor en múltiples especialidades
             </p>
         </div>
+        <style>
+        .service-thumb{width:100%;height:200px;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1.5rem;background:var(--accent-color)}
+        .service-thumb img{width:100%;height:100%;object-fit:cover}
+        .services-grid-modern .service-card-modern{animation:none}
+        .services-grid-modern .service-card-modern:hover{transform:none;box-shadow:var(--shadow-soft)}
+        .services-grid-modern .service-card-modern::before{display:none}
+        .services-modern .services-grid-modern{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:2.5rem}
+        .services-modern .service-card-modern{padding:2.25rem}
+        @media(max-width:768px){
+            .services-modern .services-grid-modern{grid-template-columns:1fr;gap:1.5rem}
+            .service-thumb{height:180px}
+            .services-modern .service-card-modern{padding:2rem}
+        }
+        </style>
         
         <div class="services-grid-modern">
             <!-- Confiabilidad y MPd -->
             <div class="service-card-modern" data-service="predictivo">
-                <div class="service-icon-modern">
-                    <i class="fas fa-chart-line"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Confiabilidad y MPd">
                 </div>
                 <div class="service-content">
                     <h3>Confiabilidad y MPd</h3>
@@ -92,16 +99,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=MPd" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Ensayos No Destructivos (END) -->
             <div class="service-card-modern" data-service="ensayos">
-                <div class="service-icon-modern">
-                    <i class="fas fa-search"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Ensayos No Destructivos">
                 </div>
                 <div class="service-content">
                     <h3>Ensayos No Destructivos (END)</h3>
@@ -124,16 +127,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=ensayos" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Inspección y Certificación de Equipos -->
             <div class="service-card-modern" data-service="inspeccion">
-                <div class="service-icon-modern">
-                    <i class="fas fa-shield-alt"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/5.jpg" alt="Inspección y Certificación de Equipos">
                 </div>
                 <div class="service-content">
                     <h3>Inspección y Certificación de Equipos</h3>
@@ -156,16 +155,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=inspeccion" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Topografía, Geodesia y Medición Láser 3D -->
             <div class="service-card-modern" data-service="topografia">
-                <div class="service-icon-modern">
-                    <i class="fas fa-map-marked-alt"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/3.jpg" alt="Topografía, Geodesia y Medición Láser 3D">
                 </div>
                 <div class="service-content">
                     <h3>Topografía, Geodesia y Medición Láser 3D</h3>
@@ -188,16 +183,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=topografia" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Consultoría y Asesoramiento -->
             <div class="service-card-modern" data-service="consultoria">
-                <div class="service-icon-modern">
-                    <i class="fas fa-lightbulb"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/6.jpg" alt="Consultoría y Asesoramiento">
                 </div>
                 <div class="service-content">
                     <h3>Consultoría y Asesoramiento</h3>
@@ -220,16 +211,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=consultoria" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Servicios Especializados -->
             <div class="service-card-modern" data-service="especializados">
-                <div class="service-icon-modern">
-                    <i class="fas fa-cogs"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/7.jpg" alt="Servicios Especializados">
                 </div>
                 <div class="service-content">
                     <h3>Servicios Especializados</h3>
@@ -252,16 +239,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="?page=especializados" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
 
             <!-- Alquiler y Venta de Equipos & Calibraciones -->
             <div class="service-card-modern" data-service="alquiler">
-                <div class="service-icon-modern">
-                    <i class="fas fa-tools"></i>
+                <div class="service-thumb">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/4.jpg" alt="Alquiler y Venta de Equipos & Calibraciones">
                 </div>
                 <div class="service-content">
                     <h3>Alquiler y Venta de Equipos & Calibraciones</h3>
@@ -280,14 +263,10 @@
                         </div>
                         <div class="benefit-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Calibración Electrónica</span>
+                            <span>Calibraciones en el extranjero</span>
                         </div>
                     </div>
                 </div>
-                <a href="?page=alquiler" class="service-link">
-                    <span>Ver más</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </div>

@@ -4,7 +4,6 @@
     <?php 
     // Configuración del hero para esta página
     $title = "Visión y Misión";
-    $description = "Nuestros valores y objetivos que guían cada uno de nuestros servicios";
     $backgroundImage = "assets/img/nosotros/2.jpg";
     
     // Incluir el componente hero

@@ -55,7 +55,7 @@ body {
 
 /* Hero Section con carrusel de imágenes */
 .hero-modern {
-    min-height: 50vh;
+    min-height: 60vh;
     color: var(--white);
     display: flex;
     align-items: center;

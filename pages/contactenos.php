@@ -1,9 +1,6 @@
 <?php 
 // Configuración del hero para esta página
 $title = "Contáctenos";
-$description = "Estamos aquí para ayudarte con tus necesidades de medición, certificación y servicios técnicos especializados";
-
-
 // Incluir el componente hero
 include __DIR__ . '/../includes/hero-service.php';
 ?>
@@ -59,7 +56,7 @@ include __DIR__ . '/../includes/hero-service.php';
                                 <i class="fas fa-phone"></i>
                                 Teléfono
                             </h3>
-                            <p>+51 940 061 321</p>
+                            <p><a href="https://wa.me/51940061321" target="_blank" rel="noopener">+51 940 061 321</a></p>
                         </div>
 
                         <div class="contact-item">
@@ -67,7 +64,7 @@ include __DIR__ . '/../includes/hero-service.php';
                                 <i class="fas fa-envelope"></i>
                                 Email
                             </h3>
-                            <p>ventas@qpmsac.com.pe</p>
+                            <p><a href="mailto:ventas@qpmsac.com.pe">ventas@qpmsac.com.pe</a></p>
                         </div>
 
                         <div class="contact-item">
