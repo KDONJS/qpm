@@ -58,8 +58,8 @@
             </p>
         </div>
         <style>
-        .service-thumb{width:100%;height:200px;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1.5rem;background:var(--accent-color)}
-        .service-thumb img{width:100%;height:100%;object-fit:cover}
+        .service-thumb{width:100%;height:280px;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1.5rem;background:var(--accent-color)}
+        .service-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
         .services-grid-modern .service-card-modern{animation:none}
         .services-grid-modern .service-card-modern:hover{transform:none;box-shadow:var(--shadow-soft)}
         .services-grid-modern .service-card-modern::before{display:none}
@@ -67,7 +67,7 @@
         .services-modern .service-card-modern{padding:2.25rem}
         @media(max-width:768px){
             .services-modern .services-grid-modern{grid-template-columns:1fr;gap:1.5rem}
-            .service-thumb{height:180px}
+            .service-thumb{height:220px}
             .services-modern .service-card-modern{padding:2rem}
         }
         </style>
@@ -104,7 +104,7 @@
             <!-- Ensayos No Destructivos (END) -->
             <div class="service-card-modern" data-service="ensayos">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Ensayos No Destructivos">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/ensayos.png" alt="Ensayos No Destructivos">
                 </div>
                 <div class="service-content">
                     <h3>Ensayos No Destructivos (END)</h3>
@@ -132,7 +132,7 @@
             <!-- Inspección y Certificación de Equipos -->
             <div class="service-card-modern" data-service="inspeccion">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/5.jpg" alt="Inspección y Certificación de Equipos">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/inspeccion.png" alt="Inspección y Certificación de Equipos">
                 </div>
                 <div class="service-content">
                     <h3>Inspección y Certificación de Equipos</h3>
@@ -160,7 +160,7 @@
             <!-- Topografía, Geodesia y Medición Láser 3D -->
             <div class="service-card-modern" data-service="topografia">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/3.jpg" alt="Topografía, Geodesia y Medición Láser 3D">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/topografia.png" alt="Topografía, Geodesia y Medición Láser 3D">
                 </div>
                 <div class="service-content">
                     <h3>Topografía, Geodesia y Medición Láser 3D</h3>
@@ -188,7 +188,7 @@
             <!-- Consultoría y Asesoramiento -->
             <div class="service-card-modern" data-service="consultoria">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/6.jpg" alt="Consultoría y Asesoramiento">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/consultorioa.jpeg" alt="Consultoría y Asesoramiento">
                 </div>
                 <div class="service-content">
                     <h3>Consultoría y Asesoramiento</h3>
@@ -216,7 +216,7 @@
             <!-- Servicios Especializados -->
             <div class="service-card-modern" data-service="especializados">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/7.jpg" alt="Servicios Especializados">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/servicios.png" alt="Servicios Especializados">
                 </div>
                 <div class="service-content">
                     <h3>Servicios Especializados</h3>
@@ -244,7 +244,7 @@
             <!-- Alquiler y Venta de Equipos & Calibraciones -->
             <div class="service-card-modern" data-service="alquiler">
                 <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/4.jpg" alt="Alquiler y Venta de Equipos & Calibraciones">
+                    <img src="<?php echo $basePath; ?>assets/img/servicios/alquiler.jpg" alt="Alquiler y Venta de Equipos & Calibraciones">
                 </div>
                 <div class="service-content">
                     <h3>Alquiler y Venta de Equipos & Calibraciones</h3>

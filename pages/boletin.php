@@ -15,20 +15,26 @@
             <h2 class="section-title">Noticias Recientes</h2>
             <div class="news-timeline">
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">15</span>
-                        <span class="month">Julio</span>
-                        <span class="year">2025</span>
+                    <div class="news-image">
+                        <img src="<?php echo $basePath; ?>assets/img/boletin/EXPO.jpeg" alt="EXPOMANT 2025 - QPM SAC PERÚ" />
+                    </div>
+                    <div class="news-content">
+                        <h3>EXPOMANT 2025 – Ipeman – Instituto Peruano de Mantenimiento</h3>
+                        <p>Nos complace compartir nuestra participación en este importante evento, donde nuestra Gerente General, Ysabel Torres Guerrero de QPM SAC Perú, presentó la ponencia:
+ “Evaluación de Termografía Infrarroja (IRT) Automatizada para la Inspección de Liners de Molinos”.</p>
+                        <a href="https://www.linkedin.com/posts/qpm-sacperu_expomant2025-expomant-mantenimientopredictivo-activity-7393683706684542976-R1ok/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABLU5IwBhnz9vziw27VriNLR8X19eRiebW4" target="_blank" class="news-link">
+                            <i class="fab fa-linkedin"></i>
+                            Ver en LinkedIn <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="<?php echo $basePath; ?>assets/img/boletin/GFLC.jpeg" alt="Visita a GOLD FIELDS" />
                     </div>
                     <div class="news-content">
                         <h3>Visita Estratégica a GOLD FIELDS - Fortaleciendo Alianzas</h3>
                         <p>En QPM SAC PERÚ compartimos lo que fue nuestra visita a nuestro socio estratégico GOLD FIELDS, una valiosa oportunidad para seguir potenciándonos como equipo y elevar continuamente nuestros estándares de prestación de servicios en Mantenimiento Predictivo (MPD), Ensayos No Destructivos (NDT) y Confiabilidad de Equipos de Planta y Procesos.</p>
-                        <div class="news-tags">
-                            <span class="tag">#MantenimientoPredictivo</span>
-                            <span class="tag">#NDT</span>
-                            <span class="tag">#Confiabilidad</span>
-                            <span class="tag">#IndustriaMinera</span>
-                        </div>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7350909494236696582" target="_blank" class="news-link">
                             <i class="fab fa-linkedin"></i>
                             Ver en LinkedIn <i class="fas fa-external-link-alt"></i>
@@ -37,20 +43,12 @@
                 </div>
 
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">15</span>
-                        <span class="month">Junio</span>
-                        <span class="year">2025</span>
+                    <div class="news-image">
+                        <img src="<?php echo $basePath; ?>assets/img/boletin/ACEROS.jpeg" alt="Aceros Arequipa - Charla Normativa de Izaje" />
                     </div>
                     <div class="news-content">
                         <h3>Charla Especializada: Normativa de Inspección de Equipos de Izaje</h3>
                         <p>Como parte del valor agregado que ofrecemos a nuestros socios estratégicos como Aceros Arequipa, organizamos una charla especializada sobre "Normativa Aplicable a la Inspección de Equipos de Izaje y manejo de Cargas", en colaboración con C3PERU CAPACITACION. Este tipo de iniciativas refuerzan nuestro compromiso con la seguridad, la formación continua y la excelencia operativa en entornos industriales.</p>
-                        <div class="news-tags">
-                            <span class="tag">#SeguridadIndustrial</span>
-                            <span class="tag">#IzajeDeCargas</span>
-                            <span class="tag">#CapacitaciónIndustrial</span>
-                            <span class="tag">#QPM</span>
-                        </div>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7321548567720955905/" target="_blank" class="news-link">
                             <i class="fab fa-linkedin"></i>
                             Ver en LinkedIn <i class="fas fa-external-link-alt"></i>
@@ -220,12 +218,13 @@
 }
 
 .news-timeline {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 .news-item {
     display: flex;
+    align-items: stretch;
     margin-bottom: 2.5rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
@@ -245,6 +244,23 @@
     background: var(--light-blue);
     border-radius: var(--border-radius);
     padding: 1rem 0.5rem;
+}
+
+.news-image {
+    flex-shrink: 0;
+    width: 220px;
+    height: auto;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-right: 2rem;
+    background: var(--light-blue);
+    align-self: stretch;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .news-date .day {
@@ -488,25 +504,13 @@
         grid-template-columns: 1fr;
     }
     
-    .news-item {
-        flex-direction: column;
-    }
+    .news-item { flex-direction: column; gap: 1rem; align-items: flex-start; }
     
-    .news-date {
-        width: auto;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .news-date .day,
-    .news-date .month,
-    .news-date .year {
-        display: inline;
-    }
+    .news-image { width: 100%; height: auto; margin: 0 0 1rem 0; border-radius: var(--border-radius-lg); }
+    .news-image img { width: 100%; height: auto; object-fit: cover; }
+    .news-content h3 { font-size: 1.1rem; }
+    .news-content p { font-size: 0.95rem; }
+    .news-link { font-size: 0.95rem; }
     
     .events-grid {
         grid-template-columns: 1fr;
@@ -543,8 +547,8 @@
         padding: 1.5rem;
     }
     
-    .section-title {
-        font-size: 1.5rem;
-    }
+    .section-title { font-size: 1.5rem; }
+    .news-content h3 { font-size: 1rem; }
+    .news-content p { font-size: 0.9rem; }
 }
 </style>

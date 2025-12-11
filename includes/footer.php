@@ -15,9 +15,9 @@
             <div class="footer-section-modern">
                 <h4 class="section-title-modern">Empresa</h4>
                 <ul class="footer-links-modern">
-                    <li><a href="?page=nosotros">Nosotros</a></li>
-                    <li><a href="?page=nuestro-equipo">Nuestro Equipo</a></li>
+                    <li><a href="?page=nuestro-equipo">Nosotros</a></li>
                     <li><a href="?page=contactenos">Contáctenos</a></li>
+                    <li><a href="?page=boletin">Boletin</a></li>
                 </ul>
             </div>
 

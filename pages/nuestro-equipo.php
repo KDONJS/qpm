@@ -3,7 +3,7 @@
 <main>
     <?php 
     // Configuración del hero para esta página
-    $title = "Nuestro Equipo";
+    $title = "Nosotros";
     $backgroundImage = "assets/img/equipo/WhatsApp Image 2025-08-28 at 10.45.52 AM.jpeg";
     
     // Incluir el componente hero
@@ -20,15 +20,6 @@
                      Desde febrero de 2015, hemos trabajado con compromiso y responsabilidad, brindando soluciones confiables e innovadoras que contribuyen al desarrollo sostenible de nuestros clientes en el sector minero e industrial.
                 </p>
                 
-                <div class="experience-highlight">
-                    <div class="highlight-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <div>
-                            <h3>Desde Febrero 2015</h3>
-                            <p>Trabajando con compromiso y responsabilidad</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="commitment-section">
@@ -59,76 +50,6 @@
         </div>
     </section>
 
-    <section class="values-section">
-        <div class="container">
-            <div class="values-intro">
-                <h2>Valores</h2>
-                <p>Nuestros valores guían cada decisión y acción con excelencia, responsabilidad y enfoque en las personas.</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon"><i class="fas fa-user-check"></i></div>
-                    <div class="value-content">
-                        <h4>Excelencia</h4>
-                        <p>Buscamos superar las expectativas en cada proyecto con calidad y mejora continua.</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="value-content">
-                        <h4>Responsabilidad</h4>
-                        <p>Actuamos con integridad y compromiso con la seguridad y el cumplimiento normativo.</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
-                    <div class="value-content">
-                        <h4>Innovación</h4>
-                        <p>Implementamos soluciones creativas y tecnológicas para desafíos complejos.</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon"><i class="fas fa-people-carry"></i></div>
-                    <div class="value-content">
-                        <h4>Trabajo en Equipo</h4>
-                        <p>Impulsamos la colaboración y el desarrollo del talento de nuestros colaboradores.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="vision-commitment-section">
-        <div class="container">
-            <div class="vision-commitment-content">
-                <h2>Nuestro Compromiso con el Futuro</h2>
-                <p class="vision-commitment-description">Desde febrero de 2015, hemos demostrado nuestro compromiso con la excelencia y el crecimiento sostenible. Miramos hacia el futuro con la determinación de seguir siendo líderes en nuestro sector.</p>
-                <div class="vision-commitment-grid">
-                    <div class="vision-commitment-item">
-                        <div class="vision-commitment-icon"><i class="fas fa-chart-line"></i></div>
-                        <div class="vision-commitment-text">
-                            <h4>Crecimiento Sostenible</h4>
-                            <p>Desarrollamos estrategias que aseguran nuestro crecimiento a largo plazo mientras contribuimos al éxito de nuestros clientes y el desarrollo de nuestro equipo.</p>
-                        </div>
-                    </div>
-                    <div class="vision-commitment-item">
-                        <div class="vision-commitment-icon"><i class="fas fa-users"></i></div>
-                        <div class="vision-commitment-text">
-                            <h4>Desarrollo del Talento</h4>
-                            <p>Invertimos en la capacitación y crecimiento profesional de nuestros colaboradores, manteniendo las certificaciones más exigentes del mercado.</p>
-                        </div>
-                    </div>
-                    <div class="vision-commitment-item">
-                        <div class="vision-commitment-icon"><i class="fas fa-globe"></i></div>
-                        <div class="vision-commitment-text">
-                            <h4>Expansión Internacional</h4>
-                            <p>Trabajamos para consolidar nuestra presencia en mercados internacionales, llevando nuestra experiencia y calidad más allá de las fronteras nacionales.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Galería del Equipo -->
     <section class="team-gallery">
         <div class="container">

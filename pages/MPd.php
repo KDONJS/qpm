@@ -100,19 +100,43 @@
     /* Grid de Servicios */
     .services-grid-modern {
         display: grid;
-        grid-template-columns: repeat(3, minmax(380px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .service-card-modern {
         background: var(--card-bg);
         border-radius: var(--border-radius);
-        padding: 2.5rem;
+        padding: 2.75rem;
         box-shadow: var(--shadow-soft);
         border: 1px solid var(--border-color);
         transition: var(--transition);
         position: relative;
         overflow: hidden;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .service-thumb {
+        width: 100%;
+        height: 180px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        margin-bottom: 0;
+        background: var(--light-bg);
+    }
+    .service-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .service-card-modern { grid-template-columns: 1fr; }
+        .service-thumb { height: 180px; margin-bottom: 1rem; }
     }
 
     .service-card-modern::before {
@@ -183,7 +207,7 @@
     /* Responsive Design */
     @media (max-width: 1200px) {
         .services-grid-modern {
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, minmax(440px, 1fr));
         }
     }
 
@@ -214,7 +238,7 @@
         
         .services-grid-modern {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .service-card-modern {
@@ -241,7 +265,7 @@
         }
         
         .service-card-modern {
-            padding: 1.5rem;
+            padding: 1.75rem;
         }
         
         .service-icon-modern {
@@ -322,8 +346,8 @@
 
                 <!-- Análisis Vibracional -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-wave-square"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Análisis Vibracional" />
                     </div>
                     <div class="service-content">
                         <h3>Análisis Vibracional Convencional y Avanzado</h3>
@@ -337,8 +361,8 @@
 
                 <!-- Termografía Infrarroja -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-thermometer-half"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Termografía Infrarroja" />
                     </div>
                     <div class="service-content">
                         <h3>Termografía Infrarroja</h3>
@@ -352,8 +376,8 @@
 
                 <!-- Alineamiento de Máquinas -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-crosshairs"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Alineamiento de Máquinas" />
                     </div>
                     <div class="service-content">
                         <h3>Alineamiento de Máquinas: Ejes Colineales, Ejes Paralelos, Engranajes</h3>
@@ -367,8 +391,8 @@
 
                 <!-- Ultrasonido Acústico -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-volume-up"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Ultrasonido Acústico" />
                     </div>
                     <div class="service-content">
                         <h3>Ultrasonido Acústico</h3>
@@ -382,8 +406,8 @@
 
                 <!-- Verificaciones Geométricas con Láser -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-ruler-combined"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Verificaciones Geométricas con Láser" />
                     </div>
                     <div class="service-content">
                         <h3>Verificaciones Geométricas con Láser: Planitud, Rectitud, Verticalidad, Paralelismo, Concentricidad</h3>
@@ -397,8 +421,8 @@
 
                 <!-- Balanceo Dinámico In Situ -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-balance-scale"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Balanceo Dinámico In Situ" />
                     </div>
                     <div class="service-content">
                         <h3>Balanceo Dinámico In Situ</h3>
@@ -412,8 +436,8 @@
 
                 <!-- Sistemas de monitoreo remoto -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-satellite-dish"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Sistemas de monitoreo remoto" />
                     </div>
                     <div class="service-content">
                         <h3>Sistemas de monitoreo remoto de vibraciones y termografía insitu</h3>
@@ -427,8 +451,8 @@
 
                 <!-- Medición Elongación de pernos -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-wrench"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Medición Elongación de pernos" />
                     </div>
                     <div class="service-content">
                         <h3>Medición Elongación de pernos en molinos</h3>
@@ -442,8 +466,8 @@
 
                 <!-- Análisis de aceites -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-flask"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Análisis de aceites" />
                     </div>
                     <div class="service-content">
                         <h3>Análisis de aceites</h3>
