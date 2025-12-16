@@ -253,8 +253,8 @@ html {
     // Configuración del hero para esta página
     $title = "Topografía, Geodesia y Medición láser 3D";
     $description = "Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional. También realizamos mediciones en 3D con equipo láser tracker que permite medir con alta precisión las dimensiones de un objeto grande a través de la reflexión de la luz láser en dianas retroreflectoras colocadas sobre los puntos a medir.";
-    $badge = "Ponemos a tu alcance alta tecnología, precisión y pasión";
-    $backgroundImage = "assets/img/servicios/4.jpg";
+
+    $backgroundImage = "assets/img/servicios/topografia.png";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';

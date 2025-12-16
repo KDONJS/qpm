@@ -391,8 +391,7 @@
         // Configuración del hero para esta página
         $title = "Consultoría y Asesoramiento";
         $description = "Desarrollamos soluciones para tu empresa, trabajando juntos de la mano para brindarte la mejor opción de implementación e inversión";
-        $badge = "Convertimos tu idea o proyecto en realidad";
-        $backgroundImage = "assets/img/servicios/6.jpg";
+        $backgroundImage = "assets/img/servicios/consultorioa.jpeg";
         
         // Incluir el componente hero
         include __DIR__ . '/../includes/hero-service.php';

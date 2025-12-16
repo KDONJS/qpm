@@ -327,7 +327,7 @@ html {
     // Configuración del hero para esta página
     $title = "Servicios Especializados";
     $description = "Desarrollamos tus proyectos con eficiencia, seguridad y calidad. Soluciones técnicas avanzadas para la industria más exigente.";
-    $backgroundImage = "assets/img/servicios/7.jpg";
+    $backgroundImage = "assets/img/servicios/servicios.png";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';

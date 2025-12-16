@@ -490,6 +490,7 @@ html {
     // Configuración del hero para esta página
     $title = "Alquiler y Venta de Equipos & Calibraciones";
     $description = "Soluciones comerciales integrales para equipos de inspección con soporte técnico especializado y alcance internacional";
+    $backgroundImage = "assets/img/servicios/alquiler.jpg";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';

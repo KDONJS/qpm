@@ -385,7 +385,7 @@ html {
     // Configuración del hero para esta página
     $title = "Inspección y Certificación de Equipos";
     $description = "Inspecciones integrales con tecnología avanzada, personal certificado y cumplimiento de normativas internacionales para garantizar la seguridad operativa";
-    $backgroundImage = "assets/img/servicios/5.jpg";
+    $backgroundImage = "assets/img/servicios/inspeccion.png";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';

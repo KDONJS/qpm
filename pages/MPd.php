@@ -323,7 +323,7 @@
     // Configuración del hero para esta página
     $title = "MPd y Confiabilidad";
     $description = "Tecnología avanzada de análisis predictivo para maximizar la confiabilidad operacional";
-    $backgroundImage = "assets/img/servicios/2.jpg";
+    $backgroundImage = "assets/img/servicios/1.jpg";
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';
     ?>
@@ -347,7 +347,7 @@
                 <!-- Análisis Vibracional -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Análisis Vibracional" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/1A.jpg" alt="Análisis Vibracional" />
                     </div>
                     <div class="service-content">
                         <h3>Análisis Vibracional Convencional y Avanzado</h3>
@@ -362,7 +362,7 @@
                 <!-- Termografía Infrarroja -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Termografía Infrarroja" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/2A.jpg" alt="Termografía Infrarroja" />
                     </div>
                     <div class="service-content">
                         <h3>Termografía Infrarroja</h3>
@@ -377,7 +377,7 @@
                 <!-- Alineamiento de Máquinas -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Alineamiento de Máquinas" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/3A.jpg" alt="Alineamiento de Máquinas" />
                     </div>
                     <div class="service-content">
                         <h3>Alineamiento de Máquinas: Ejes Colineales, Ejes Paralelos, Engranajes</h3>
@@ -392,7 +392,7 @@
                 <!-- Ultrasonido Acústico -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Ultrasonido Acústico" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/4A.jpg" alt="Ultrasonido Acústico" />
                     </div>
                     <div class="service-content">
                         <h3>Ultrasonido Acústico</h3>
@@ -407,7 +407,7 @@
                 <!-- Verificaciones Geométricas con Láser -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Verificaciones Geométricas con Láser" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/5A.jpg" alt="Verificaciones Geométricas con Láser" />
                     </div>
                     <div class="service-content">
                         <h3>Verificaciones Geométricas con Láser: Planitud, Rectitud, Verticalidad, Paralelismo, Concentricidad</h3>
@@ -422,7 +422,6 @@
                 <!-- Balanceo Dinámico In Situ -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Balanceo Dinámico In Situ" />
                     </div>
                     <div class="service-content">
                         <h3>Balanceo Dinámico In Situ</h3>
@@ -437,7 +436,7 @@
                 <!-- Sistemas de monitoreo remoto -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Sistemas de monitoreo remoto" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/7A.png" alt="Sistemas de monitoreo remoto" />
                     </div>
                     <div class="service-content">
                         <h3>Sistemas de monitoreo remoto de vibraciones y termografía insitu</h3>
@@ -452,7 +451,7 @@
                 <!-- Medición Elongación de pernos -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Medición Elongación de pernos" />
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/8A.jpg" alt="Medición Elongación de pernos" />
                     </div>
                     <div class="service-content">
                         <h3>Medición Elongación de pernos en molinos</h3>
@@ -467,7 +466,6 @@
                 <!-- Análisis de aceites -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/servicios/2.jpg" alt="Análisis de aceites" />
                     </div>
                     <div class="service-content">
                         <h3>Análisis de aceites</h3>

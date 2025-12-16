@@ -495,7 +495,7 @@ html {
     // Configuración del hero para esta página
     $title = "Ensayos No Destructivos";
     $description = "Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto mediante técnicas especializadas y normativas internacionales";
-    $backgroundImage = "assets/img/servicios/3.jpg";
+    $backgroundImage = "assets/img/servicios/ensayos.png";
     
     // Incluir el componente hero
     include __DIR__ . '/../includes/hero-service.php';
