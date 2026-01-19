@@ -1,63 +1,56 @@
-<?php include 'includes/header.php'; ?>
-<link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/index.css">
-
 <?php
-// Sistema de enrutamiento dinámico
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+/**
+ * Archivo principal del sitio web
+ * QPM Servicios Técnicos
+ * 
+ * Sistema de enrutamiento dinámico centralizado
+ */
 
-// Páginas válidas
-$valid_pages = [
-    'home' => 'Inicio',
-    'nosotros' => 'Nosotros',
-    'MPd' => 'MPd y Confiabilidad', 
-    'ensayos' => 'Ensayos No Destructivos',
-    'topografia' => 'Topografía y Geodesia',
-    'inspeccion' => 'Inspección y Certificación',
-    'consultoria' => 'Consultoría y Asesoramiento',
-    'especializados' => 'Servicios Especializados',
-    'alquiler' => 'Alquiler y Venta de Equipos',
-    'boletin' => 'Boletín y Noticias',
-    'nuestro-equipo' => 'Nuestro Equipo',
-    'vision' => 'Visión y Misión',
-    'contactenos' => 'Contáctenos'
-];
+// Cargar configuración y funciones
+require_once __DIR__ . '/config/config.php';
+require_once __DIR__ . '/includes/functions.php';
 
-// Validar que la página existe
-if (!array_key_exists($page, $valid_pages)) {
-    $page = 'home';
+// Obtener página actual de forma segura
+$currentPage = getCurrentPage();
+$pageInfo = getPageInfo($currentPage);
+
+// Incluir el header
+include 'includes/header.php';
+
+// Cargar CSS específico si existe
+if ($currentPage === 'home') {
+    echo '<link rel="stylesheet" href="' . asset('css/index.css') . '">';
 }
 ?>
 
 <main>
     <?php
-    // Cargar contenido dinámico según la página seleccionada
-    switch($page) {
-        case 'home': 
-                include 'pages/home.php';
-            break;
-            
-        default:
-            // Cargar páginas dinámicamente desde la carpeta pages
-            $page_file = "pages/{$page}.php";
-            if (file_exists($page_file)) {
-                include $page_file;
-            } else {
-                // Página no encontrada
-                ?>
-                <section class="page-section">
-                    <div class="container">
-                        <h1>Página no encontrada</h1>
-                        <p>La página que buscas no existe.</p>
-                        <a href="?" class="btn btn-primary">Volver al inicio</a>
-                    </div>
-                </section>
-                <?php
-            }
-            break;
+    // Cargar contenido de la página
+    $pageFile = "pages/{$pageInfo['file']}";
+    
+    if (file_exists($pageFile)) {
+        include $pageFile;
+    } else {
+        // Página no encontrada - Mostrar error 404
+        ?>
+        <section class="page-section error-404">
+            <div class="container">
+                <div class="error-content">
+                    <h1>404</h1>
+                    <h2>Página no encontrada</h2>
+                    <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+                    <a href="<?php echo getPageUrl('home'); ?>" class="btn btn-primary">Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+        <?php
     }
     ?>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php
+// Incluir el footer
+include 'includes/footer.php';
+?>
 </body>
 </html>

@@ -80,7 +80,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Confiabilidad y MPd</h3>
-                    <p class="service-tagline">Anticipamos errores y aseguramos el funcionamiento de tus equipos.</p>
+                    <p class="service-tagline">Anticipamos defectos y aseguramos el funcionamiento de tus equipos.</p>
                     <p class="service-description">
                         Analizamos datos para detectar anomalías en el funcionamiento de los equipos.
                     </p>

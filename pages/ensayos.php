@@ -128,20 +128,23 @@ body {
 /* Grid de Servicios */
 .services-grid-modern {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
 }
 
 .service-card-modern {
     background: var(--card-bg);
     border-radius: var(--border-radius);
-    padding: 2.5rem;
+    padding: 2.75rem;
     box-shadow: var(--shadow-soft);
     border: 1px solid var(--border-color);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    align-items: start;
 }
 
 .service-card-modern::before {
@@ -163,6 +166,22 @@ body {
 .service-card-modern:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-medium);
+}
+
+.service-thumb {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 0;
+    background: var(--light-bg);
+}
+
+.service-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .service-icon-modern {
@@ -373,13 +392,17 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-    .services-grid-modern {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-}
-
 @media (max-width: 768px) {
+    .service-card-modern { 
+        grid-template-columns: 1fr; 
+        padding: 2rem;
+    }
+    
+    .service-thumb { 
+        height: 180px; 
+        margin-bottom: 1rem; 
+    }
+    
     .services-modern {
         padding: 3rem 0;
     }
@@ -395,11 +418,6 @@ body {
     .services-grid-modern {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-    }
-    
-    .service-card-modern {
-        padding: 2rem;
-        min-height: auto;
     }
     
     .service-icon-modern {
@@ -509,119 +527,131 @@ html {
                 <p class="section-subtitle">Aplicamos los métodos más efectivos según las necesidades específicas de cada proyecto</p>
             </div>
 
-            <style>
-            .services-grid-modern.two-cols { grid-template-columns: repeat(2, minmax(420px, 1fr)); gap: 2rem; }
-            .services-grid-modern.two-cols .service-card-modern { min-height: 420px; }
-            @media (max-width: 1200px) { .services-grid-modern.two-cols { grid-template-columns: repeat(2, minmax(360px, 1fr)); } }
-            @media (max-width: 768px) { .services-grid-modern.two-cols { grid-template-columns: 1fr; } .services-grid-modern.two-cols .service-card-modern { min-height: auto; } }
-            </style>
-
-            <div class="services-grid-modern two-cols">
+            <div class="services-grid-modern">
+                <!-- Inspección Visual -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-eye"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_1_Inspección Visual.jpg" alt="Inspección Visual" />
                     </div>
                     <div class="service-content">
                         <h3>Inspección Visual</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Permite la detección de discontinuidades que afectan a la superficie visualmente accesible de los objetos.</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                Permite la detección de discontinuidades que afectan a la superficie visualmente accesible de los objetos.
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Tintes Penetrantes -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-tint"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_2_Tintes Penetrantes.jpg" alt="Tintes Penetrantes" />
                     </div>
                     <div class="service-content">
                         <h3>Tintes Penetrantes</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Método END que permite la detección de defectos superficiales finos (fisuras, grietas, etc). Existen diferentes técnicas, siendo la más usada la aplicación de Tintes Visibles en aerosol y en ocasiones Tintes Fluorescentes (Tipo I, requiere de zona oscura y lámpara UV) siendo este último el de mayor sensibilidad.</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                Método END que permite la detección de defectos superficiales finos (fisuras, grietas, etc). Existen diferentes técnicas, siendo la más usada la aplicación de Tintes Visibles en aerosol y en ocasiones Tintes Fluorescentes (Tipo I, requiere de zona oscura y lámpara UV) siendo este último el de mayor sensibilidad.
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Partículas Magnéticas -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-magnet"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_3_Partículas Magnéticas.jpg" alt="Partículas Magnéticas" />
                     </div>
                     <div class="service-content">
                         <h3>Partículas Magnéticas</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Método END que permite la detección de defectos superficiales y cercanos a la superficie de componentes ferromagnéticos mediante la magnetización de los componentes (con Yoke AC y DC, imanes, bobinas, entre otros). Se agregan partículas magnéticas (Visibles/Fluorescentes) las cuales forman un puente en el flujo magnético generando evidencias del defecto.</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                Método END que permite la detección de defectos superficiales y cercanos a la superficie de componentes ferromagnéticos mediante la magnetización de los componentes (con Yoke AC y DC, imanes, bobinas, entre otros). Se agregan partículas magnéticas (Visibles/Fluorescentes) las cuales forman un puente en el flujo magnético generando evidencias del defecto.
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Ultrasonido -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-wave-square"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_4_Ultrasonido Convencional, Phased Array y TOFD.jpg" alt="Ultrasonido Convencional, Phased Array y TOFD" />
                     </div>
                     <div class="service-content">
                         <h3>Ultrasonido Convencional, Phased Array y TOFD</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>UT Convencional: Técnica UT con la cual las ondas son transferidas al material evaluado de manera perpendicular (Haz Normal) y al rebotar con el fondo del material y llegar nuevamente al sensor se clasifica la discontinuidad para determinar el espesor, morfología/orientación del mismo e incluso el tipo.</p>
-                            <p>UT Phased Array: Técnica UT en la que un solo sensor incluye 16 a 64 elementos de ultrasonido. El primer elemento emite las ondas completando un proceso de transmisión sucesivo por tiempo en micro segundos (delay law), en donde se requiere generar trazabilidad mediante software que registran posición (encoder), y otros mecanismos para desplazar el sensor de manera continua (esquemas semiautomáticos, automáticos y manuales).</p>
-                            <p>TOFD: Técnica UT que sincroniza la emisión de señales de ultrasonido angular con dos sensores ubicados a una distancia determinada. En el caso de que esto sea interrumpido por el defecto (eco), lo registrará.</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                <strong>UT Convencional:</strong> Técnica UT con la cual las ondas son transferidas al material evaluado de manera perpendicular (Haz Normal) y al rebotar con el fondo del material y llegar nuevamente al sensor se clasifica la discontinuidad para determinar el espesor, morfología/orientación del mismo e incluso el tipo.
+                                <br><br>
+                                <strong>UT Phased Array:</strong> Técnica UT en la que un solo sensor incluye 16 a 64 elementos de ultrasonido. El primer elemento emite las ondas completando un proceso de transmisión sucesivo por tiempo en micro segundos (delay law), en donde se requiere generar trazabilidad mediante software que registran posición (encoder), y otros mecanismos para desplazar el sensor de manera continua (esquemas semiautomáticos, automáticos y manuales).
+                                <br><br>
+                                <strong>TOFD:</strong> Técnica UT que sincroniza la emisión de señales de ultrasonido angular con dos sensores ubicados a una distancia determinada. En el caso de que esto sea interrumpido por el defecto (eco), lo registrará.
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Eddy Current -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-bolt"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_5_Eddy Current y Eddy Current Array.jpg" alt="Eddy Current y Eddy Current Array" />
                     </div>
                     <div class="service-content">
                         <h3>Eddy Current y Eddy Current Array</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Eddy Current: Técnica básica de ET, en la que se hace aproximar al componente evaluado una bobina que induce sobre este un campo magnético de comportamiento predecible (respecto a una probeta o al mismo material) y al ser alterado permite detectar defectos superficiales o cercanos a la superficie evaluada.</p>
-                            <p>Eddy Current Array: Técnica ET, en la que el sensor incluye más de una bobina, permitiendo escanear una zona con una mayor visualización del componente evaluado. En algunas ocasiones se requiere la adición de un registrador de posición (encoder).</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                <strong>Eddy Current:</strong> Técnica básica de ET, en la que se hace aproximar al componente evaluado una bobina que induce sobre este un campo magnético de comportamiento predecible (respecto a una probeta o al mismo material) y al ser alterado permite detectar defectos superficiales o cercanos a la superficie evaluada.
+                                <br><br>
+                                <strong>Eddy Current Array:</strong> Técnica ET, en la que el sensor incluye más de una bobina, permitiendo escanear una zona con una mayor visualización del componente evaluado. En algunas ocasiones se requiere la adición de un registrador de posición (encoder).
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- MFL -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_6_Magnetic Flux Leakage - MFL.jpg" alt="Magnetic Flux Leakage - MFL" />
                     </div>
                     <div class="service-content">
                         <h3>Magnetic Flux Leakage - MFL</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Es una técnica de prueba no destructiva que detecta defectos en materiales ferromagnéticos causada por corrosión o estrés. Se utiliza para inspeccionar tuberías, tanques de almacenamiento, cables y otras estructuras metálicas.</p>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                Es una técnica de prueba no destructiva que detecta defectos en materiales ferromagnéticos causada por corrosión o estrés. Se utiliza para inspeccionar tuberías, tanques de almacenamiento, cables y otras estructuras metálicas.
+                            </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Radiografía Industrial -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-radiation"></i>
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_7_Radiografía industrial.jpg" alt="Radiografía Industrial" />
                     </div>
                     <div class="service-content">
-                        <h3>Radiografía industrial</h3>
-                        <div class="service-description">
-                            <strong>Descripción:</strong>
-                            <p>Método END Volumétrico que permite detectar defectos al interior de los componentes evaluados mediante la exposición a rayos Gamma o X.</p>
+                        <h3>Radiografía Industrial</h3>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                Método END Volumétrico que permite detectar defectos al interior de los componentes evaluados mediante la exposición a rayos Gamma o X.
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="service-card-modern">
-                <div class="service-icon-modern">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <div class="service-content">
-                    <h3>Dureza superficial portátil rugosidad</h3>
-                    <div class="service-definition">
-                        <div class="definition-content">
-                            <strong>Dureza Superficial Portátil, Rugosidad:</strong>
-                            Dureza: es una prueba que evalúa la resistencia de un material a ser rayado o penetrado. Es una herramienta portátil útil para determinar si un material es adecuado para un propósito específico. Rugosidad: La inspección de rugosidad evalúa la textura de una superficie. Identifica defectos de la superficie, su gravedad y el impacto en el material evaluado.
+                <!-- Dureza y Rugosidad -->
+                <div class="service-card-modern">
+                    <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_8_Dureza Superficial Portátil, Rugosidad..jpg" alt="Dureza Superficial Portátil y Rugosidad" />
+                    </div>
+                    <div class="service-content">
+                        <h3>Dureza Superficial Portátil y Rugosidad</h3>
+                        <div class="service-definition">
+                            <div class="definition-content">
+                                <strong>Dureza:</strong> Es una prueba que evalúa la resistencia de un material a ser rayado o penetrado. Es una herramienta portátil útil para determinar si un material es adecuado para un propósito específico.
+                                <br><br>
+                                <strong>Rugosidad:</strong> La inspección de rugosidad evalúa la textura de una superficie. Identifica defectos de la superficie, su gravedad y el impacto en el material evaluado.
+                            </div>
                         </div>
                     </div>
                 </div>

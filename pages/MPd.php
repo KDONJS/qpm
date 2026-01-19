@@ -422,6 +422,7 @@
                 <!-- Balanceo Dinámico In Situ -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/6A.jpg" alt="Balanceo Dinámico In Situ" />
                     </div>
                     <div class="service-content">
                         <h3>Balanceo Dinámico In Situ</h3>
@@ -466,6 +467,7 @@
                 <!-- Análisis de aceites -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
+                        <img src="<?php echo $basePath; ?>assets/img/mpd/9A.jpg" alt="Análisis de aceites" />
                     </div>
                     <div class="service-content">
                         <h3>Análisis de aceites</h3>

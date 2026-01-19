@@ -1,11 +1,13 @@
 <?php
 /**
  * Componente Hero reutilizable para páginas de servicios
+ * QPM Servicios Técnicos
  * 
- * @param string $title - Título principal del hero
- * @param string $description - Descripción del servicio
- * @param string $badge - Texto del badge (opcional)
- * @param string $backgroundImage - URL de la imagen de fondo (opcional)
+ * Variables requeridas:
+ * @var string $title - Título principal del hero
+ * @var string $description - Descripción del servicio (opcional)
+ * @var string $badge - Texto del badge (opcional)
+ * @var string $backgroundImage - URL de la imagen de fondo (opcional)
  */
 
 // Valores por defecto si no se pasan parámetros
@@ -13,6 +15,12 @@ $title = $title ?? 'Nuestros Servicios';
 $description = $description ?? '';
 $badge = $badge ?? null;
 $backgroundImage = $backgroundImage ?? null;
+
+// Construir estilo de fondo
+$heroStyle = '';
+if ($backgroundImage) {
+    $heroStyle = ' style="background-image: url(\'' . htmlspecialchars($backgroundImage, ENT_QUOTES, 'UTF-8') . '\');"';
+}
 ?>
 
 <style>
@@ -131,16 +139,19 @@ $backgroundImage = $backgroundImage ?? null;
 }
 </style>
 
-<section class="service-hero" <?php if ($backgroundImage): ?>style="background-image: url('<?php echo htmlspecialchars($backgroundImage); ?>');"<?php endif; ?>>
+<section class="service-hero"<?php echo $heroStyle; ?>>
     <div class="container">
         <?php if ($badge): ?>
             <div class="service-hero-badge">
                 <i class="fas fa-star"></i>
-                <?php echo htmlspecialchars($badge); ?>
+                <span><?php echo htmlspecialchars($badge, ENT_QUOTES, 'UTF-8'); ?></span>
             </div>
         <?php endif; ?>
         
-        <h1><?php echo htmlspecialchars($title); ?></h1>
-        <p><?php echo htmlspecialchars($description); ?></p>
+        <h1><?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?></h1>
+        
+        <?php if ($description): ?>
+            <p><?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8'); ?></p>
+        <?php endif; ?>
     </div>
 </section>

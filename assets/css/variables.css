@@ -1,0 +1,186 @@
+/**
+ * Variables CSS Globales
+ * QPM Servicios Técnicos
+ * 
+ * Este archivo contiene todas las variables CSS estandarizadas
+ * que se usan en todo el sitio
+ */
+
+:root {
+    /* Colores principales */
+    --dark-blue: #2f4290;
+    --teal: #26c6da;
+    --bright-blue: #2196f3;
+    --white: #ffffff;
+    --green: #0caf71;
+    --lime: #0caf71;
+    
+    /* Colores de texto */
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    
+    /* Colores de fondo */
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    
+    /* Sombras */
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    /* Bordes */
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --border-radius-sm: 8px;
+    
+    /* Transiciones */
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
+    --transition-slow: all 0.5s ease;
+    
+    /* Fuentes */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Tamaños de fuente */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    
+    /* Pesos de fuente */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 5rem;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    
+    /* Breakpoints (para referencia en JS) */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    
+    /* Container */
+    --container-max-width: 1200px;
+    --container-padding: 1rem;
+    
+    /* Aliases para compatibilidad */
+    --primary-color: var(--dark-blue);
+    --secondary-color: var(--teal);
+    --accent-color: var(--bright-blue);
+    --success-color: var(--green);
+    --light-blue: #e8f4fd;
+    --light-gray: var(--light-bg);
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: var(--teal);
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del body */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container estándar */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+}
+
+/* Secciones estándar */
+.section {
+    padding: var(--spacing-4xl) 0;
+}
+
+.section-header-modern {
+    text-align: center;
+    margin-bottom: var(--spacing-4xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header-modern h2,
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.2;
+}
+
+.section-header-modern p,
+.section-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .section-header-modern h2,
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-header-modern p,
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header-modern h2,
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}

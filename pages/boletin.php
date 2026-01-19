@@ -12,7 +12,7 @@
     <!-- Sección de Noticias Recientes -->
     <section class="recent-news">
         <div class="container">
-            <h2 class="section-title">Noticias Recientes</h2>
+            <h2 class="section-title">Noticias</h2>
             <div class="news-timeline">
                 <div class="news-item">
                     <div class="news-image">
