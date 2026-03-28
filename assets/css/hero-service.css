@@ -1,0 +1,116 @@
+/**
+ * Estilos del componente Hero para páginas de servicios
+ * QPM Servicios Técnicos
+ */
+
+.service-hero {
+    background: var(--dark-blue, #2f4290);
+    color: var(--white, #ffffff);
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay semitransparente */
+.service-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, rgba(17, 38, 85, 0.78) 0%, rgba(29, 58, 120, 0.65) 55%, rgba(17, 181, 123, 0.3) 100%);
+    z-index: 1;
+}
+
+/* Patrón decorativo */
+.service-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.16) 0%, transparent 45%),
+                      radial-gradient(circle at 88% 0%, rgba(76, 125, 241, 0.2) 0%, transparent 35%);
+    z-index: 1;
+}
+
+.service-hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.service-hero h1 {
+    font-family: 'Sora', 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: var(--white, #ffffff);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero p {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--white, #ffffff);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.service-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    font-size: 0.9rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.service-hero-badge i {
+    color: var(--lime, #0caf71);
+    filter: drop-shadow(0 0 4px rgba(12, 175, 113, 0.5));
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        padding: 3rem 0;
+        min-height: 40vh;
+    }
+    
+    .service-hero h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .service-hero-badge {
+        margin-bottom: 1.5rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-hero {
+        padding: 2rem 0;
+        min-height: 35vh;
+    }
+}

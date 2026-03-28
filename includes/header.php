@@ -4,18 +4,13 @@
  * QPM Servicios Técnicos
  */
 
-// Cargar configuración y funciones
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/functions.php';
 
-// Obtener información de la página actual
 $currentPage = getCurrentPage();
 $pageInfo = getPageInfo($currentPage);
 $pageTitle = $pageInfo ? $pageInfo['title'] . ' - ' . COMPANY_NAME : COMPANY_NAME;
 $metaDescription = $pageInfo ? $pageInfo['meta_description'] : 'QPM Servicios Técnicos';
-
-// Mantener compatibilidad con código existente
-$basePath = BASE_URL;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,8 +27,8 @@ $basePath = BASE_URL;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Fuente Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fuentes globales -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" href="<?php echo asset('img/LOGO SIN FONDO.png'); ?>" type="image/png">
@@ -52,119 +47,11 @@ $basePath = BASE_URL;
                     </a>
                 </div>
                 
-                <!-- Menú Desktop -->
-                <ul class="nav-menu">
-                    <li><a href="<?php echo getPageUrl('home'); ?>" class="nav-link <?php echo getActiveClass('home'); ?>">Inicio</a></li>
-                    <li><a href="<?php echo getPageUrl('nuestro-equipo'); ?>" class="nav-link <?php echo getActiveClass('nuestro-equipo'); ?>">Nosotros</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-link">Servicios</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="<?php echo getPageUrl('MPd'); ?>" class="nav-link">MPd y Confiabilidad</a></li>
-                            <li class="dropdown-item"><a href="<?php echo getPageUrl('ensayos'); ?>" class="nav-link">Ensayos No Destructivos</a></li>
-                            <li class="dropdown-item"><a href="<?php echo getPageUrl('topografia'); ?>" class="nav-link">Topografía y Geodesia</a></li>
-                            <li class="dropdown-item separator"><a href="<?php echo getPageUrl('inspeccion'); ?>" class="nav-link">Inspección y Certificación de Equipos</a></li>
-                            <li class="dropdown-item"><a href="<?php echo getPageUrl('consultoria'); ?>" class="nav-link">Consultoría y Asesoramiento</a></li>
-                            <li class="dropdown-item separator"><a href="<?php echo getPageUrl('especializados'); ?>" class="nav-link">Servicios Especializados</a></li>
-                            <li class="dropdown-item"><a href="<?php echo getPageUrl('alquiler'); ?>" class="nav-link">Alquiler y Venta de Equipos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo getPageUrl('boletin'); ?>" class="nav-link <?php echo getActiveClass('boletin'); ?>">Boletín</a></li>
-                    <li><a href="<?php echo getPageUrl('contactenos'); ?>" class="nav-link <?php echo getActiveClass('contactenos'); ?>">Contacto</a></li>
-                </ul>
-
-                <!-- Menú Móvil -->
-                <div class="mobile-menu">
-                    <div class="mobile-menu-header">
-                        <h3>Menú</h3>
-                        <button class="mobile-menu-close" aria-label="Cerrar menú">&times;</button>
-                    </div>
-                    
-                    <div class="mobile-menu-content">
-                        <!-- Inicio -->
-                        <div class="mobile-menu-item">
-                            <a href="<?php echo getPageUrl('home'); ?>" class="mobile-nav-link">
-                                <i class="fas fa-home"></i>
-                                Inicio
-                            </a>
-                        </div>
-
-                        <!-- Nosotros -->
-                        <div class="mobile-menu-section">
-                            <h4 class="mobile-section-title">
-                                <i class="fas fa-users"></i>
-                                Nosotros
-                            </h4>
-                            <div class="mobile-section-items">
-                                <a href="<?php echo getPageUrl('nuestro-equipo'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-user-tie"></i>
-                                    Nuestro Equipo
-                                </a>
-                                <a href="<?php echo getPageUrl('vision'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-eye"></i>
-                                    Visión y Misión
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Servicios -->
-                        <div class="mobile-menu-section">
-                            <h4 class="mobile-section-title">
-                                <i class="fas fa-cogs"></i>
-                                Servicios
-                            </h4>
-                            <div class="mobile-section-items">
-                                <a href="<?php echo getPageUrl('MPd'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-chart-line"></i>
-                                    MPd y Confiabilidad
-                                </a>
-                                <a href="<?php echo getPageUrl('ensayos'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-microscope"></i>
-                                    Ensayos No Destructivos
-                                </a>
-                                <a href="<?php echo getPageUrl('topografia'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                    Topografía y Geodesia
-                                </a>
-                                <a href="<?php echo getPageUrl('inspeccion'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-search"></i>
-                                    Inspección y Certificación
-                                </a>
-                                <a href="<?php echo getPageUrl('consultoria'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-handshake"></i>
-                                    Consultoría y Asesoramiento
-                                </a>
-                                <a href="<?php echo getPageUrl('especializados'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-tools"></i>
-                                    Servicios Especializados
-                                </a>
-                                <a href="<?php echo getPageUrl('alquiler'); ?>" class="mobile-nav-link">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    Alquiler y Venta de Equipos
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Boletín y Contacto -->
-                        <div class="mobile-menu-item">
-                            <a href="<?php echo getPageUrl('boletin'); ?>" class="mobile-nav-link">
-                                <i class="fas fa-newspaper"></i>
-                                Boletín y Noticias
-                            </a>
-                        </div>
-
-                        <div class="mobile-menu-item">
-                            <a href="<?php echo getPageUrl('contactenos'); ?>" class="mobile-nav-link">
-                                <i class="fas fa-envelope"></i>
-                                Contacto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Overlay para el menú móvil -->
+                <?php echo renderDesktopMenu($currentPage); ?>
+                <?php echo renderMobileMenu(); ?>
+                
                 <div class="mobile-menu-overlay"></div>
                 
-                <!-- Botón hamburguesa -->
                 <div class="nav-toggle">
                     <span></span>
                     <span></span>
@@ -174,65 +61,220 @@ $basePath = BASE_URL;
         </nav>
     </header>
 
-    <script>
-        /**
-         * Control del menú móvil
-         */
-        (function() {
-            'use strict';
+<?php
+/**
+ * Renderiza el menú de navegación desktop
+ * @param string $currentPage Página actual
+ * @return string HTML del menú
+ */
+function renderDesktopMenu(string $currentPage): string {
+    $menuItems = [
+        ['url' => getPageUrl('home'), 'label' => 'Inicio', 'page' => 'home'],
+        ['url' => getPageUrl('nuestro-equipo'), 'label' => 'Nosotros', 'page' => 'nuestro-equipo'],
+        ['url' => '#', 'label' => 'Servicios', 'page' => '', 'dropdown' => renderServicesDropdown()],
+        ['url' => getPageUrl('boletin'), 'label' => 'Boletín', 'page' => 'boletin'],
+        ['url' => getPageUrl('contactenos'), 'label' => 'Contacto', 'page' => 'contactenos'],
+    ];
+    
+    $html = '<ul class="nav-menu">';
+    
+    foreach ($menuItems as $item) {
+        $activeClass = getActiveClass($item['page']);
+        $dropdownClass = isset($item['dropdown']) ? 'dropdown' : '';
+        
+        $html .= '<li class="' . $dropdownClass . '">';
+        $html .= '<a href="' . $item['url'] . '" class="nav-link ' . $activeClass . '">' . $item['label'] . '</a>';
+        
+        if (isset($item['dropdown'])) {
+            $html .= $item['dropdown'];
+        }
+        
+        $html .= '</li>';
+    }
+    
+    $html .= '</ul>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza el dropdown de servicios
+ * @return string HTML del dropdown
+ */
+function renderServicesDropdown(): string {
+    $services = [
+        ['url' => getPageUrl('MPd'), 'label' => 'MPd y Confiabilidad'],
+        ['url' => getPageUrl('ensayos'), 'label' => 'Ensayos No Destructivos'],
+        ['url' => getPageUrl('topografia'), 'label' => 'Topografía y Geodesia'],
+        ['url' => getPageUrl('inspeccion'), 'label' => 'Inspección y Certificación de Equipos', 'separator' => true],
+        ['url' => getPageUrl('consultoria'), 'label' => 'Consultoría y Asesoramiento'],
+        ['url' => getPageUrl('especializados'), 'label' => 'Servicios Especializados', 'separator' => true],
+        ['url' => getPageUrl('alquiler'), 'label' => 'Alquiler y Venta de Equipos'],
+    ];
+    
+    $html = '<ul class="dropdown-menu">';
+    
+    foreach ($services as $service) {
+        $separatorClass = ($service['separator'] ?? false) ? 'separator' : '';
+        $html .= '<li class="dropdown-item ' . $separatorClass . '">';
+        $html .= '<a href="' . $service['url'] . '" class="nav-link">' . $service['label'] . '</a>';
+        $html .= '</li>';
+    }
+    
+    $html .= '</ul>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza el menú móvil
+ * @return string HTML del menú móvil
+ */
+function renderMobileMenu(): string {
+    $sections = [
+        [
+            'title' => '',
+            'icon' => 'fa-home',
+            'items' => [
+                ['url' => getPageUrl('home'), 'label' => 'Inicio', 'icon' => 'fa-home']
+            ]
+        ],
+        [
+            'title' => 'Nosotros',
+            'icon' => 'fa-users',
+            'items' => [
+                ['url' => getPageUrl('nuestro-equipo'), 'label' => 'Nuestro Equipo', 'icon' => 'fa-user-tie'],
+                ['url' => getPageUrl('vision'), 'label' => 'Visión y Misión', 'icon' => 'fa-eye'],
+            ]
+        ],
+        [
+            'title' => 'Servicios',
+            'icon' => 'fa-cogs',
+            'items' => [
+                ['url' => getPageUrl('MPd'), 'label' => 'MPd y Confiabilidad', 'icon' => 'fa-chart-line'],
+                ['url' => getPageUrl('ensayos'), 'label' => 'Ensayos No Destructivos', 'icon' => 'fa-microscope'],
+                ['url' => getPageUrl('topografia'), 'label' => 'Topografía y Geodesia', 'icon' => 'fa-map-marked-alt'],
+                ['url' => getPageUrl('inspeccion'), 'label' => 'Inspección y Certificación', 'icon' => 'fa-search'],
+                ['url' => getPageUrl('consultoria'), 'label' => 'Consultoría y Asesoramiento', 'icon' => 'fa-handshake'],
+                ['url' => getPageUrl('especializados'), 'label' => 'Servicios Especializados', 'icon' => 'fa-tools'],
+                ['url' => getPageUrl('alquiler'), 'label' => 'Alquiler y Venta de Equipos', 'icon' => 'fa-shopping-cart'],
+            ]
+        ],
+        [
+            'title' => '',
+            'items' => [
+                ['url' => getPageUrl('boletin'), 'label' => 'Boletín y Noticias', 'icon' => 'fa-newspaper'],
+                ['url' => getPageUrl('contactenos'), 'label' => 'Contacto', 'icon' => 'fa-envelope'],
+            ]
+        ],
+    ];
+    
+    $html = '<div class="mobile-menu">';
+    $html .= '<div class="mobile-menu-header">';
+    $html .= '<h3>Menú</h3>';
+    $html .= '<button class="mobile-menu-close" aria-label="Cerrar menú">&times;</button>';
+    $html .= '</div>';
+    $html .= '<div class="mobile-menu-content">';
+    
+    foreach ($sections as $section) {
+        if (empty($section['title'])) {
+            foreach ($section['items'] as $item) {
+                $html .= renderMobileMenuItem($item);
+            }
+        } else {
+            $html .= '<div class="mobile-menu-section">';
+            $html .= '<h4 class="mobile-section-title">';
+            $html .= '<i class="fas ' . $section['icon'] . '"></i>';
+            $html .= $section['title'];
+            $html .= '</h4>';
+            $html .= '<div class="mobile-section-items">';
             
-            const navToggle = document.querySelector('.nav-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileMenuClose = document.querySelector('.mobile-menu-close');
-            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            const body = document.body;
-
-            function openMobileMenu() {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.classList.add('active');
-                navToggle.classList.add('active');
-                body.style.overflow = 'hidden';
+            foreach ($section['items'] as $item) {
+                $html .= renderMobileNavLink($item);
             }
+            
+            $html .= '</div>';
+            $html .= '</div>';
+        }
+    }
+    
+    $html .= '</div>';
+    $html .= '</div>';
+    
+    return $html;
+}
 
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-                navToggle.classList.remove('active');
-                body.style.overflow = '';
+/**
+ * Renderiza un item del menú móvil simple
+ * @param array<string, string> $item
+ * @return string
+ */
+function renderMobileMenuItem(array $item): string {
+    return '<div class="mobile-menu-item">' .
+           '<a href="' . $item['url'] . '" class="mobile-nav-link">' .
+           '<i class="fas ' . $item['icon'] . '"></i>' .
+           $item['label'] .
+           '</a>' .
+           '</div>';
+}
+
+/**
+ * Renderiza un link de navegación móvil
+ * @param array<string, string> $item
+ * @return string
+ */
+function renderMobileNavLink(array $item): string {
+    return '<a href="' . $item['url'] . '" class="mobile-nav-link">' .
+           '<i class="fas ' . $item['icon'] . '"></i>' .
+           $item['label'] .
+           '</a>';
+}
+?>
+
+<script>
+    (function() {
+        'use strict';
+        
+        const DOM = {
+            navToggle: document.querySelector('.nav-toggle'),
+            mobileMenu: document.querySelector('.mobile-menu'),
+            mobileMenuClose: document.querySelector('.mobile-menu-close'),
+            mobileMenuOverlay: document.querySelector('.mobile-menu-overlay'),
+            mobileNavLinks: document.querySelectorAll('.mobile-nav-link'),
+            body: document.body
+        };
+
+        function openMobileMenu() {
+            DOM.mobileMenu?.classList.add('active');
+            DOM.mobileMenuOverlay?.classList.add('active');
+            DOM.navToggle?.classList.add('active');
+            DOM.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            DOM.mobileMenu?.classList.remove('active');
+            DOM.mobileMenuOverlay?.classList.remove('active');
+            DOM.navToggle?.classList.remove('active');
+            DOM.body.style.overflow = '';
+        }
+
+        function toggleMobileMenu() {
+            const isOpen = DOM.mobileMenu?.classList.contains('active');
+            isOpen ? closeMobileMenu() : openMobileMenu();
+        }
+
+        DOM.navToggle?.addEventListener('click', toggleMobileMenu);
+        DOM.mobileMenuClose?.addEventListener('click', closeMobileMenu);
+        DOM.mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+        
+        DOM.mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && DOM.mobileMenu?.classList.contains('active')) {
+                closeMobileMenu();
             }
-
-            function toggleMobileMenu() {
-                if (mobileMenu.classList.contains('active')) {
-                    closeMobileMenu();
-                } else {
-                    openMobileMenu();
-                }
-            }
-
-            // Event listeners
-            if (navToggle) {
-                navToggle.addEventListener('click', toggleMobileMenu);
-            }
-
-            if (mobileMenuClose) {
-                mobileMenuClose.addEventListener('click', closeMobileMenu);
-            }
-
-            if (mobileMenuOverlay) {
-                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-            }
-
-            // Cerrar menú al hacer clic en un enlace
-            mobileNavLinks.forEach(function(link) {
-                link.addEventListener('click', closeMobileMenu);
-            });
-
-            // Cerrar menú con tecla ESC
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                    closeMobileMenu();
-                }
-            });
-        })();
-    </script>
+        });
+    })();
+</script>

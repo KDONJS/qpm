@@ -115,6 +115,24 @@ body {
     overflow: hidden;
 }
 
+.service-thumb-modern {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    background: #edf3fb;
+}
+
+.service-thumb-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
 .service-card-modern::before {
     content: '';
     position: absolute;
@@ -255,6 +273,10 @@ body {
     .service-card-modern {
         padding: 2rem;
     }
+
+    .service-thumb-modern {
+        height: 190px;
+    }
     
     .service-icon-modern {
         width: 60px;
@@ -273,6 +295,10 @@ body {
     
     .service-card-modern {
         padding: 1.5rem;
+    }
+
+    .service-thumb-modern {
+        height: 170px;
     }
     
     .service-icon-modern {
@@ -346,8 +372,8 @@ html {
             <div class="services-grid-modern">
                 <!-- Tratamiento Térmico -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-fire"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_1_Tratamiento Térmico.jpg'); ?>" alt="Tratamiento Térmico" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Tratamiento Térmico</h3>
@@ -378,8 +404,8 @@ html {
 
                 <!-- Reparaciones y Montajes Críticos -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-tools"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_2_Reparaciones y Montajes Críticos.jpg'); ?>" alt="Reparaciones y Montajes Críticos" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Reparaciones y Montajes Críticos</h3>
@@ -411,8 +437,8 @@ html {
 
                 <!-- Mantenimiento de Grúas Puente y Polipastos -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-weight-hanging"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_3_Mantenimiento de Grúas Puente y Polipastos.jpg'); ?>" alt="Mantenimiento de Grúas Puente y Polipastos" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Mantenimiento de Grúas Puente y Polipastos</h3>
@@ -445,8 +471,8 @@ html {
 
                 <!-- Sistemas de Torque / Tensionado Hidráulico -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-wrench"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_4_Sistemas de Torque _Tensionado hidráulico controlado..jpg'); ?>" alt="Sistemas de Torque / Tensionado Hidráulico Controlado" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Sistemas de Torque / Tensionado Hidráulico Controlado</h3>
@@ -478,8 +504,8 @@ html {
 
                 <!-- Elaboración de Procedimientos WPS -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-file-contract"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_6_Elaboración de procedimientos de soldadura (WPS), Registro de calificación (PQR).jpg'); ?>" alt="Elaboración de Procedimientos de Soldadura" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Elaboración de Procedimientos de Soldadura (WPS)</h3>
@@ -511,8 +537,8 @@ html {
 
                 <!-- Análisis Estructural -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-calculator"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/especializados/' . rawurlencode('F_5_Análisis y Cálculo estructural .jpg'); ?>" alt="Análisis Estructural" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Análisis Estructural</h3>

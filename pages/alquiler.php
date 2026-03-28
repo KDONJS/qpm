@@ -114,6 +114,24 @@ body {
     overflow: hidden;
 }
 
+.service-thumb-modern {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    background: #edf3fb;
+}
+
+.service-thumb-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
 .service-card-modern::before {
     content: '';
     position: absolute;
@@ -419,6 +437,10 @@ body {
     .service-card-modern {
         padding: 2rem;
     }
+
+    .service-thumb-modern {
+        height: 190px;
+    }
     
     .service-icon-modern {
         width: 60px;
@@ -437,6 +459,10 @@ body {
     
     .service-card-modern {
         padding: 1.5rem;
+    }
+
+    .service-thumb-modern {
+        height: 170px;
     }
     
     .service-icon-modern {
@@ -508,8 +534,8 @@ html {
 
             <div class="services-grid-modern">
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-tools"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/alquiler/' . rawurlencode('G_1_Alquiler de Equipos.png'); ?>" alt="Alquiler de Equipos" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Alquiler de Equipos</h3>
@@ -520,8 +546,8 @@ html {
                 </div>
 
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/alquiler/' . rawurlencode('G_2_Venta de Equipos.jpg'); ?>" alt="Venta de Equipos" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Venta de Equipos</h3>
@@ -532,8 +558,8 @@ html {
                 </div>
 
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-certificate"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/alquiler/' . rawurlencode('G_3_Calibraciones.jpg'); ?>" alt="Calibraciones" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Calibraciones</h3>

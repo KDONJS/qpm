@@ -531,7 +531,7 @@ html {
                 <!-- Inspección Visual -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_1_Inspección Visual.jpg" alt="Inspección Visual" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_1_Inspección Visual.jpg" alt="Inspección Visual" />
                     </div>
                     <div class="service-content">
                         <h3>Inspección Visual</h3>
@@ -546,7 +546,7 @@ html {
                 <!-- Tintes Penetrantes -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_2_Tintes Penetrantes.jpg" alt="Tintes Penetrantes" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_2_Tintes Penetrantes.jpg" alt="Tintes Penetrantes" />
                     </div>
                     <div class="service-content">
                         <h3>Tintes Penetrantes</h3>
@@ -561,7 +561,7 @@ html {
                 <!-- Partículas Magnéticas -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_3_Partículas Magnéticas.jpg" alt="Partículas Magnéticas" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_3_Partículas Magnéticas.jpg" alt="Partículas Magnéticas" />
                     </div>
                     <div class="service-content">
                         <h3>Partículas Magnéticas</h3>
@@ -576,7 +576,7 @@ html {
                 <!-- Ultrasonido -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_4_Ultrasonido Convencional, Phased Array y TOFD.jpg" alt="Ultrasonido Convencional, Phased Array y TOFD" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_4_Ultrasonido Convencional, Phased Array y TOFD.jpg" alt="Ultrasonido Convencional, Phased Array y TOFD" />
                     </div>
                     <div class="service-content">
                         <h3>Ultrasonido Convencional, Phased Array y TOFD</h3>
@@ -595,7 +595,7 @@ html {
                 <!-- Eddy Current -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_5_Eddy Current y Eddy Current Array.jpg" alt="Eddy Current y Eddy Current Array" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_5_Eddy Current y Eddy Current Array.jpg" alt="Eddy Current y Eddy Current Array" />
                     </div>
                     <div class="service-content">
                         <h3>Eddy Current y Eddy Current Array</h3>
@@ -612,7 +612,7 @@ html {
                 <!-- MFL -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_6_Magnetic Flux Leakage - MFL.jpg" alt="Magnetic Flux Leakage - MFL" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_6_Magnetic Flux Leakage - MFL.jpg" alt="Magnetic Flux Leakage - MFL" />
                     </div>
                     <div class="service-content">
                         <h3>Magnetic Flux Leakage - MFL</h3>
@@ -627,7 +627,7 @@ html {
                 <!-- Radiografía Industrial -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_7_Radiografía industrial.jpg" alt="Radiografía Industrial" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_7_Radiografía industrial.jpg" alt="Radiografía Industrial" />
                     </div>
                     <div class="service-content">
                         <h3>Radiografía Industrial</h3>
@@ -642,7 +642,7 @@ html {
                 <!-- Dureza y Rugosidad -->
                 <div class="service-card-modern">
                     <div class="service-thumb">
-                        <img src="<?php echo $basePath; ?>assets/img/ensayos/B_8_Dureza Superficial Portátil, Rugosidad..jpg" alt="Dureza Superficial Portátil y Rugosidad" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/ensayos/B_8_Dureza Superficial Portátil, Rugosidad..jpg" alt="Dureza Superficial Portátil y Rugosidad" />
                     </div>
                     <div class="service-content">
                         <h3>Dureza Superficial Portátil y Rugosidad</h3>

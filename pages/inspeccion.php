@@ -144,6 +144,24 @@ body {
     overflow: hidden;
 }
 
+.service-thumb-modern {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    background: #edf3fb;
+}
+
+.service-thumb-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
 .service-card-modern::before {
     content: '';
     position: absolute;
@@ -314,6 +332,10 @@ body {
         padding: 2rem;
         min-height: auto;
     }
+
+    .service-thumb-modern {
+        height: 190px;
+    }
     
     .service-icon-modern {
         width: 60px;
@@ -332,6 +354,10 @@ body {
     
     .service-card-modern {
         padding: 1.5rem;
+    }
+
+    .service-thumb-modern {
+        height: 170px;
     }
     
     .service-icon-modern {
@@ -402,8 +428,8 @@ html {
             <div class="services-grid-modern">
                 <!-- Izajes y Manejo de Cargas -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-weight-hanging"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/inspeccion/' . rawurlencode('C_1_Izajes y Manejo de Cargas.jpg'); ?>" alt="Izajes y Manejo de Cargas" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Izajes y Manejo de Cargas</h3>
@@ -450,8 +476,8 @@ html {
 
                 <!-- Recipientes a Presión -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-gauge-high"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/inspeccion/' . rawurlencode('C_2_Recipientes a Presión.jpg'); ?>" alt="Recipientes a Presión" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Recipientes a Presión</h3>
@@ -473,8 +499,8 @@ html {
 
                 <!-- Tanques de Almacenamiento sobre suelo -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-warehouse"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/inspeccion/' . rawurlencode('C_3_Tanques de Almacenamiento sobre suelo.jpg'); ?>" alt="Tanques de Almacenamiento sobre suelo" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Tanques de Almacenamiento sobre suelo</h3>
@@ -507,8 +533,8 @@ html {
 
                 <!-- Sistemas de Tubería -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-water"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/inspeccion/' . rawurlencode('C_4_Sistemas de Tubería.jpg'); ?>" alt="Sistemas de Tubería" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Sistemas de Tubería</h3>
@@ -533,8 +559,8 @@ html {
 
                 <!-- Pruebas Neumáticas e Hidrostáticas -->
                 <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-wind"></i>
+                    <div class="service-thumb-modern">
+                        <img src="<?php echo BASE_URL . 'assets/img/inspeccion/' . rawurlencode('C_5_Pruebas Neumáticas e Hidrostáticas  a tanques y equipos.jpg'); ?>" alt="Pruebas Neumáticas e Hidrostáticas" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Pruebas Neumáticas e Hidrostáticas a tanques y equipos</h3>

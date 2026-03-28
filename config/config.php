@@ -4,6 +4,7 @@
  * QPM Servicios Técnicos
  * 
  * Este archivo contiene todas las configuraciones globales del sitio
+ * NOTA: Las funciones auxiliares se han movido a includes/functions.php
  */
 
 // Prevenir acceso directo
@@ -15,18 +16,19 @@ if (!defined('QPM_INIT')) {
 // CONFIGURACIÓN DE RUTAS
 // ==========================================
 
-// Ruta base del proyecto
+/** @var string Ruta base del proyecto */
 define('BASE_PATH', dirname(__DIR__) . '/');
 
-// Detectar si estamos en subcarpeta
-$basePath = (basename(dirname($_SERVER['PHP_SELF'])) === 'pages') ? '../' : '';
-define('BASE_URL', $basePath);
+/** @var string URL base detectada automáticamente */
+$scriptDirectory = basename(dirname($_SERVER['PHP_SELF']));
+$baseUrl = ($scriptDirectory === 'pages') ? '../' : '';
+define('BASE_URL', $baseUrl);
 
 // ==========================================
 // CONFIGURACIÓN DE PÁGINAS
 // ==========================================
 
-// Páginas válidas del sistema
+/** @var array<string, array{title: string, file: string, meta_description: string}> */
 define('VALID_PAGES', [
     'home' => [
         'title' => 'Inicio',
@@ -120,58 +122,6 @@ define('IMG_PATH', ASSETS_PATH . 'img/');
 // CONFIGURACIÓN DE SEGURIDAD
 // ==========================================
 
-// Configuración de sesión
-ini_set('session.cookie_httponly', 1);
-ini_set('session.cookie_secure', 1);
-ini_set('session.use_strict_mode', 1);
-
-// ==========================================
-// FUNCIONES AUXILIARES
-// ==========================================
-
-/**
- * Obtiene la página actual solicitada
- * @return string
- */
-function getCurrentPage() {
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-    // Sanitizar entrada
-    $page = preg_replace('/[^a-zA-Z0-9\-_]/', '', $page);
-    return array_key_exists($page, VALID_PAGES) ? $page : 'home';
-}
-
-/**
- * Obtiene información de una página
- * @param string $page
- * @return array|null
- */
-function getPageInfo($page) {
-    return VALID_PAGES[$page] ?? null;
-}
-
-/**
- * Genera URL de página
- * @param string $page
- * @return string
- */
-function getPageUrl($page) {
-    return BASE_URL . '?page=' . $page;
-}
-
-/**
- * Genera URL de asset
- * @param string $path
- * @return string
- */
-function asset($path) {
-    return ASSETS_PATH . ltrim($path, '/');
-}
-
-/**
- * Escapa HTML para prevenir XSS
- * @param string $text
- * @return string
- */
-function e($text) {
-    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-}
+ini_set('session.cookie_httponly', '1');
+ini_set('session.cookie_secure', '1');
+ini_set('session.use_strict_mode', '1');

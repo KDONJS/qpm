@@ -361,6 +361,103 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ===== FOOTER THEME REFRESH ===== */
+.footer-modern {
+    background: linear-gradient(160deg, #0f1c3a 0%, #152a53 55%, #17325f 100%);
+    border-top: 1px solid rgba(203, 213, 225, 0.2);
+    position: relative;
+}
+
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 8% 10%, rgba(22, 181, 123, 0.2) 0, transparent 30%),
+                      radial-gradient(circle at 90% 0%, rgba(76, 125, 241, 0.2) 0, transparent 34%);
+    pointer-events: none;
+}
+
+.footer-modern .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section-modern h4.section-title-modern {
+    font-family: 'Sora', 'Manrope', sans-serif;
+    letter-spacing: 0.01em;
+    color: #eff6ff;
+}
+
+.footer-links-modern a,
+.contact-item-footer a {
+    color: #dbe7ff;
+}
+
+.footer-links-modern a:hover,
+.contact-item-footer a:hover {
+    color: #ffffff;
+}
+
+.footer-links-modern a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-links-modern a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s ease;
+}
+
+.footer-links-modern a:hover::after {
+    transform: scaleX(1);
+}
+
+.contact-item-footer i {
+    color: #22d39a;
+}
+
+.footer-bottom-modern {
+    margin-top: 0.75rem;
+    border-top-color: rgba(148, 163, 184, 0.35);
+}
+
+.footer-bottom-modern p {
+    color: #c4d4ef;
+}
+
+.company-brand .logo {
+    height: 68px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+    .footer-section-modern {
+        align-items: flex-start;
+    }
+
+    .footer-content-modern {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section-modern {
+        align-items: center;
+    }
+
+    .contact-info-footer {
+        align-items: center;
+    }
+}
+
 /* Alinear la marca a la izquierda (no centrado) y mejorar la presentación */
 .company-section .company-brand {
     display: flex;

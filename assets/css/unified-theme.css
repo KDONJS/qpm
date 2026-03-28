@@ -1,0 +1,496 @@
+/* Unified visual layer - industrial, consistent, site-wide */
+
+:root {
+    --ui-bg-0: #ffffff;
+    --ui-bg-1: #f3f7fd;
+    --ui-bg-2: #ebf1fa;
+    --ui-line: #ccd9ea;
+    --ui-line-strong: #bacbe4;
+    --ui-title: #1f3a86;
+    --ui-text: #445a7b;
+    --ui-accent: #0f9768;
+    --ui-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+    --ui-shadow-hover: 0 20px 36px rgba(15, 23, 42, 0.14);
+    --ui-radius: 14px;
+    --ui-section-space: clamp(3rem, 6vw, 5.5rem);
+}
+
+body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background: linear-gradient(180deg, #fbfdff 0%, #f4f8fe 100%);
+}
+
+main {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.section-header-modern h2,
+.clients-header h2,
+.feature-content h4,
+.service-content h3 {
+    font-family: 'Sora', 'Manrope', sans-serif !important;
+    color: var(--ui-title) !important;
+    letter-spacing: -0.015em;
+}
+
+.section,
+.services-modern,
+.clients-section,
+.contact-modern,
+.why-choose-us,
+.benefits-modern,
+.international-modern,
+.collaboration-modern,
+.cta-modern {
+    position: relative;
+    padding-top: var(--ui-section-space) !important;
+    padding-bottom: var(--ui-section-space) !important;
+}
+
+.service-hero {
+    min-height: clamp(42vh, 52vh, 58vh) !important;
+    padding: clamp(3rem, 6vw, 5rem) 0 !important;
+}
+
+.service-hero h1,
+.hero-title {
+    letter-spacing: -0.02em;
+    line-height: 1.1 !important;
+}
+
+.service-hero p,
+.hero-description {
+    max-width: 760px;
+}
+
+.service-hero h1,
+.service-hero p,
+.service-hero-badge,
+.service-hero-badge span,
+.hero-title,
+.hero-description,
+.title-line {
+    color: #ffffff !important;
+}
+
+.section::before,
+.services-modern::after,
+.clients-section::after,
+.contact-modern::before,
+.benefits-modern::before,
+.international-modern::before,
+.collaboration-modern::before {
+    content: none !important;
+}
+
+.section .container,
+.services-modern .container,
+.clients-section .container,
+.contact-modern .container,
+.benefits-modern .container,
+.international-modern .container,
+.collaboration-modern .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-header-modern,
+.section-header {
+    max-width: 820px;
+    margin-bottom: clamp(2rem, 4vw, 3.4rem) !important;
+}
+
+.section-header-modern h2,
+.section-title,
+.section-header h1,
+.clients-header h2 {
+    font-size: clamp(1.9rem, 3.8vw, 2.9rem) !important;
+}
+
+.section-header-modern p,
+.section-subtitle,
+.section-header p {
+    font-size: clamp(0.98rem, 2vw, 1.08rem) !important;
+    line-height: 1.75 !important;
+}
+
+.section-header-modern p,
+.section-subtitle,
+.clients-header p,
+.service-description,
+.detail-content,
+.feature-content p,
+.benefit-card p,
+.contact-info-value {
+    color: var(--ui-text) !important;
+}
+
+.services-grid-modern,
+.services-grid,
+.benefits-grid,
+.why-features,
+.international-features,
+.contact-grid,
+.contact-info-list {
+    gap: 1.25rem !important;
+}
+
+.service-card-modern,
+.service-card,
+.feature-card,
+.benefit-card,
+.vision-card,
+.mission-card,
+.contact-info-panel,
+.contact-info-row,
+.certificate-section,
+.normative-section,
+.service-definition,
+.detail-section {
+    border: 1px solid var(--ui-line) !important;
+    border-radius: var(--ui-radius) !important;
+    background: linear-gradient(180deg, var(--ui-bg-0) 0%, #f9fcff 100%) !important;
+    box-shadow: var(--ui-shadow) !important;
+}
+
+.service-card-modern,
+.service-card,
+.feature-card,
+.benefit-card {
+    padding: clamp(1.15rem, 2.2vw, 1.8rem) !important;
+}
+
+.service-card-modern:hover,
+.service-card:hover,
+.feature-card:hover,
+.benefit-card:hover,
+.vision-card:hover,
+.mission-card:hover,
+.contact-info-row:hover {
+    box-shadow: var(--ui-shadow-hover) !important;
+    border-color: var(--ui-line-strong) !important;
+}
+
+.service-card-modern::before,
+.service-card::before {
+    height: 3px !important;
+    background: linear-gradient(90deg, var(--ui-accent), #2450ae) !important;
+}
+
+.service-thumb-modern,
+.service-thumb,
+.service-thumb img,
+.service-thumb-modern img {
+    border-radius: 10px;
+}
+
+.service-thumb-modern,
+.service-thumb {
+    border: 1px solid #d7e3f1 !important;
+    background: var(--ui-bg-2) !important;
+}
+
+.service-thumb-modern img,
+.service-thumb img {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.service-icon-modern,
+.service-icon,
+.feature-icon,
+.benefit-icon {
+    border-radius: 12px !important;
+}
+
+.service-content h3,
+.feature-content h4,
+.benefit-card h4 {
+    font-size: clamp(1.08rem, 2.3vw, 1.28rem) !important;
+    margin-bottom: 0.65rem !important;
+}
+
+.service-description,
+.detail-content,
+.detail-list li,
+.benefit-card p,
+.feature-content p,
+.contact-info-value {
+    font-size: clamp(0.92rem, 1.8vw, 0.98rem) !important;
+    line-height: 1.7 !important;
+}
+
+.contact-info-row {
+    min-height: 84px !important;
+    padding: 0.95rem 1.1rem !important;
+}
+
+.clients-carousel {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+}
+
+.client-logo {
+    width: 170px !important;
+    height: 94px !important;
+}
+
+.google-form,
+iframe {
+    border-radius: 12px;
+}
+
+.footer-modern {
+    margin-top: 0;
+}
+
+.footer-modern,
+.footer-modern p,
+.footer-modern li,
+.footer-modern .footer-bottom-modern p,
+.footer-modern .footer-bottom-modern strong {
+    color: #eaf2ff !important;
+}
+
+.footer-modern .footer-section-modern h4.section-title-modern {
+    color: #ffffff !important;
+}
+
+.footer-modern .footer-links-modern a,
+.footer-modern .contact-item-footer a,
+.footer-modern .contact-item a,
+.footer-modern .social-link {
+    color: #e0ebff !important;
+}
+
+.footer-modern .footer-links-modern {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-modern .footer-links-modern li {
+    margin-bottom: 0.42rem !important;
+}
+
+.footer-modern .footer-links-modern a {
+    display: block !important;
+    line-height: 1.4 !important;
+}
+
+.footer-modern .footer-links-modern a:hover,
+.footer-modern .contact-item-footer a:hover,
+.footer-modern .contact-item a:hover,
+.footer-modern .social-link:hover {
+    color: #ffffff !important;
+}
+
+.footer-modern .contact-item-footer i,
+.footer-modern .contact-item i,
+.footer-modern .social-link i {
+    color: #35d9a0 !important;
+    opacity: 1 !important;
+}
+
+.footer-modern .company-brand .logo {
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+.detail-title,
+.service-benefits h4,
+.normative-section h4,
+.contact-info-label,
+.footer-section-modern h4.section-title-modern {
+    color: var(--ui-title) !important;
+}
+
+/* Ajuste de contraste solo para tarjeta de formulario embebido */
+.certificate-header,
+.certificate-header h3,
+.certificate-header p,
+.certificate-header > i,
+.certificate-header .response-badge,
+.certificate-header .response-badge span,
+.certificate-header .response-badge i {
+    color: #ffffff !important;
+}
+
+.normativa-badge {
+    border-radius: 999px;
+    border-color: #c8d8ec !important;
+    background: #f3f8ff !important;
+    color: #264388 !important;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-primary-modern,
+.btn-secondary-modern,
+.btn-cta-primary,
+.btn-cta-secondary,
+.service-link,
+.service-cta {
+    border-radius: 12px !important;
+}
+
+.btn-primary,
+.btn-primary-modern,
+.btn-cta-primary {
+    background: linear-gradient(135deg, #2f67d8 0%, #213a88 100%) !important;
+}
+
+.whatsapp-float {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22) !important;
+}
+
+@media (max-width: 768px) {
+    .services-grid-modern,
+    .services-grid,
+    .benefits-grid,
+    .international-features,
+    .why-features {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-card-modern,
+    .service-card,
+    .feature-card,
+    .benefit-card {
+        padding: 1.15rem !important;
+    }
+
+    .service-thumb-modern,
+    .service-thumb {
+        height: 180px !important;
+    }
+
+    .section,
+    .services-modern,
+    .clients-section,
+    .contact-modern,
+    .why-choose-us,
+    .benefits-modern,
+    .international-modern,
+    .collaboration-modern,
+    .cta-modern {
+        padding-top: clamp(2.4rem, 6vw, 3.2rem) !important;
+        padding-bottom: clamp(2.4rem, 6vw, 3.2rem) !important;
+    }
+
+    .section-header-modern,
+    .section-header {
+        margin-bottom: 1.8rem !important;
+    }
+
+    .service-hero {
+        min-height: 38vh !important;
+        padding: 2.6rem 0 !important;
+    }
+
+    .contact-info-row {
+        min-height: 0 !important;
+    }
+
+    .client-logo {
+        width: 150px !important;
+        height: 84px !important;
+    }
+
+    .footer-modern .footer-content-modern {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        text-align: left !important;
+    }
+
+    .footer-modern .footer-section-modern h4.section-title-modern {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .footer-modern .company-section,
+    .footer-modern .footer-section-modern {
+        grid-column: auto !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-modern .services-grid-footer {
+        grid-template-columns: 1fr !important;
+        gap: 0.6rem !important;
+    }
+
+    .footer-modern .footer-links-modern {
+        text-align: left !important;
+    }
+
+    .footer-modern .footer-links-modern a {
+        font-size: 0.98rem !important;
+    }
+
+    .footer-modern .contact-info-footer,
+    .footer-modern .contact-info {
+        align-items: flex-start !important;
+        gap: 0.55rem !important;
+    }
+
+    .footer-modern .contact-item-footer,
+    .footer-modern .contact-item {
+        justify-content: flex-start !important;
+        font-size: 0.92rem !important;
+    }
+
+    .footer-modern .contact-item-footer i,
+    .footer-modern .contact-item i,
+    .footer-modern .social-link i {
+        font-size: 1rem !important;
+        min-width: 18px;
+    }
+
+    .footer-modern .company-brand .logo {
+        height: 56px !important;
+    }
+
+    .footer-modern .footer-bottom-modern {
+        margin-top: 0.5rem !important;
+        padding-top: 1rem !important;
+    }
+
+    .footer-modern .footer-bottom-modern p {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-modern {
+        padding-top: 1.7rem !important;
+        padding-bottom: 0.9rem !important;
+    }
+
+    .footer-modern .container {
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+    }
+
+    .footer-modern .footer-content-modern {
+        gap: 0.9rem !important;
+    }
+
+    .footer-modern .footer-links-modern a,
+    .footer-modern .contact-item-footer a {
+        font-size: 0.95rem !important;
+    }
+
+    .footer-modern .contact-item-footer,
+    .footer-modern .contact-item {
+        gap: 0.6rem !important;
+    }
+}

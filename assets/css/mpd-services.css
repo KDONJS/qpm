@@ -1,0 +1,410 @@
+/**
+ * Estilos para páginas de servicios (MPd, Ensayos, etc.)
+ * QPM Servicios Técnicos
+ */
+
+:root {
+    --dark-blue: #2f4290;
+    --teal: #26c6da;
+    --bright-blue: #2196f3;
+    --white: #ffffff;
+    --green: #0caf71;
+    --lime: #0caf71;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Secciones */
+.section {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.section-header-modern {
+    text-align: center;
+    margin-bottom: 5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header-modern h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-header-modern h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+
+.section-header-modern p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bright-blue);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.section-intro-left {
+    margin-bottom: 2rem;
+}
+
+.section-intro-left h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+/* Grid de Servicios */
+.services-grid-modern {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card-modern {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.service-thumb {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 0;
+    background: var(--light-bg);
+}
+
+.service-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .service-card-modern { 
+        grid-template-columns: 1fr; 
+    }
+    .service-thumb { 
+        height: 180px; 
+        margin-bottom: 1rem; 
+    }
+}
+
+.service-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-icon-modern {
+    width: 70px;
+    height: 70px;
+    background: var(--green);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.service-icon-modern i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.service-content {
+    text-align: left;
+}
+
+.service-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.service-definition {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.service-definition .definition-content {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services-grid-modern {
+        grid-template-columns: repeat(2, minmax(440px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 3rem 0;
+    }
+    
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-header-modern {
+        margin-bottom: 3rem;
+    }
+    
+    .section-header-modern h2 {
+        font-size: 2rem;
+    }
+    
+    .services-grid-modern {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card-modern {
+        padding: 2rem;
+    }
+    
+    .service-icon-modern {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon-modern i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card-modern {
+        padding: 1.75rem;
+    }
+    
+    .service-icon-modern {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon-modern i {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== INDUSTRIAL STYLE TUNE ===== */
+body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #f7faff 0%, #f1f6fe 100%);
+}
+
+.section {
+    position: relative;
+    background: linear-gradient(180deg, #f2f6fd 0%, #f8fbff 100%);
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(33, 58, 136, 0.045) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(33, 58, 136, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-header-modern h2 {
+    font-family: 'Sora', 'Manrope', sans-serif;
+    font-size: clamp(2rem, 3.8vw, 2.7rem);
+}
+
+.section-header-modern p {
+    font-size: 1.02rem;
+}
+
+.service-card-modern {
+    border-radius: 14px;
+    border: 1px solid #ccdae9;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.09);
+    background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+}
+
+.service-card-modern::before {
+    height: 3px;
+    background: linear-gradient(90deg, #0f9768 0%, #2351b2 100%);
+}
+
+.service-card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 34px rgba(15, 23, 42, 0.13);
+}
+
+.service-thumb {
+    border-radius: 12px;
+    border: 1px solid #d8e3f0;
+}
+
+.service-content h3 {
+    font-family: 'Sora', 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    color: #1f3b85;
+}
+
+.service-definition {
+    border: 1px solid #d7e2ef;
+    background: #f3f7fd;
+    border-radius: 12px;
+}
+
+.service-definition .definition-content {
+    color: #435673;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card-modern {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.service-card-modern:nth-child(1) { animation-delay: 0.1s; }
+.service-card-modern:nth-child(2) { animation-delay: 0.2s; }
+.service-card-modern:nth-child(3) { animation-delay: 0.3s; }
+.service-card-modern:nth-child(4) { animation-delay: 0.4s; }
+.service-card-modern:nth-child(5) { animation-delay: 0.5s; }
+.service-card-modern:nth-child(6) { animation-delay: 0.6s; }
+.service-card-modern:nth-child(7) { animation-delay: 0.7s; }
+.service-card-modern:nth-child(8) { animation-delay: 0.8s; }
+.service-card-modern:nth-child(9) { animation-delay: 0.9s; }
+.service-card-modern:nth-child(10) { animation-delay: 1.0s; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

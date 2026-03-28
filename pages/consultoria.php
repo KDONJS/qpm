@@ -149,6 +149,24 @@
             overflow: hidden;
         }
 
+        .service-thumb-modern {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+            border: 1px solid var(--border-color);
+            background: #edf3fb;
+        }
+
+        .service-thumb-modern img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
         .service-card-modern::before {
             content: '';
             position: absolute;
@@ -321,6 +339,10 @@
                 padding: 2rem;
                 min-height: auto;
             }
+
+            .service-thumb-modern {
+                height: 190px;
+            }
             
             .service-icon-modern {
                 width: 60px;
@@ -339,6 +361,10 @@
             
             .service-card-modern {
                 padding: 1.5rem;
+            }
+
+            .service-thumb-modern {
+                height: 170px;
             }
             
             .service-icon-modern {
@@ -408,8 +434,8 @@
 
                 <div class="services-grid-modern">
                     <div class="service-card-modern">
-                        <div class="service-icon-modern">
-                            <i class="fas fa-cogs"></i>
+                        <div class="service-thumb-modern">
+                            <img src="<?php echo BASE_URL . 'assets/img/consultoria/' . rawurlencode('E_1_Integridad Mecanica.jpg'); ?>" alt="Integridad Mecánica" loading="lazy">
                         </div>
                         <div class="service-content">
                             <h3>Integridad Mecánica</h3>
@@ -420,8 +446,8 @@
                     </div>
 
                     <div class="service-card-modern">
-                        <div class="service-icon-modern">
-                            <i class="fas fa-clipboard-list"></i>
+                        <div class="service-thumb-modern">
+                            <img src="<?php echo BASE_URL . 'assets/img/consultoria/' . rawurlencode('E_2_Planes de Inspección.png'); ?>" alt="Planes de Inspección" loading="lazy">
                         </div>
                         <div class="service-content">
                             <h3>Planes de Inspección</h3>
@@ -432,8 +458,8 @@
                     </div>
 
                     <div class="service-card-modern">
-                        <div class="service-icon-modern">
-                            <i class="fas fa-shield-alt"></i>
+                        <div class="service-thumb-modern">
+                            <img src="<?php echo BASE_URL . 'assets/img/consultoria/' . rawurlencode('E_3_Aseguramiento de la calidad.jpg'); ?>" alt="Aseguramiento y Control de Calidad" loading="lazy">
                         </div>
                         <div class="service-content">
                             <h3>Aseguramiento y Control de Calidad</h3>
@@ -444,8 +470,8 @@
                     </div>
 
                     <div class="service-card-modern">
-                        <div class="service-icon-modern">
-                            <i class="fas fa-satellite-dish"></i>
+                        <div class="service-thumb-modern">
+                            <img src="<?php echo BASE_URL . 'assets/img/consultoria/' . rawurlencode('E_4_Sistema de Monitoreo Remoto Inhouse.jpg'); ?>" alt="Sistemas de Monitoreo Remoto Inhouse" loading="lazy">
                         </div>
                         <div class="service-content">
                             <h3>Sistemas de Monitoreo Remoto Inhouse</h3>

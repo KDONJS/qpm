@@ -59,7 +59,20 @@
             </div>
 
             <div class="gallery-grid">
-                <?php include_once $basePath.'includes/clients-service.php'; $imgs = getClientImages(__DIR__.'/../assets/img/equipo'); $i=0; foreach ($imgs as $img) { $alt = 'Equipo QPM '.ucwords(strtolower(trim(pathinfo($img, PATHINFO_FILENAME)))); $url = $basePath.'assets/img/equipo/'.rawurlencode($img); echo '<div class="gallery-item" data-index="'.$i.'"><img src="'.$url.'" alt="'.$alt.'" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>'; $i++; } ?>
+                <?php
+require_once __DIR__ . '/../includes/clients-service.php';
+$imgs = getClientImages(__DIR__ . '/../assets/img/equipo');
+$i = 0;
+foreach ($imgs as $img) {
+    $alt = 'Equipo QPM ' . ucwords(strtolower(trim(pathinfo($img, PATHINFO_FILENAME))));
+    $url = BASE_URL . 'assets/img/equipo/' . rawurlencode($img);
+    echo '<div class="gallery-item" data-index="' . $i . '">';
+    echo '<img src="' . $url . '" alt="' . $alt . '" loading="lazy" decoding="async">';
+    echo '<div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>';
+    echo '</div>';
+    $i++;
+}
+?>
             </div>
         </div>
 

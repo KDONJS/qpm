@@ -16,7 +16,7 @@
             <div class="news-timeline">
                 <div class="news-item">
                     <div class="news-image">
-                        <img src="<?php echo $basePath; ?>assets/img/boletin/EXPO.jpeg" alt="EXPOMANT 2025 - QPM SAC PERÚ" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/boletin/EXPO.jpeg" alt="EXPOMANT 2025 - QPM SAC PERÚ" />
                     </div>
                     <div class="news-content">
                         <h3>EXPOMANT 2025 – Ipeman – Instituto Peruano de Mantenimiento</h3>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="news-item">
                     <div class="news-image">
-                        <img src="<?php echo $basePath; ?>assets/img/boletin/GFLC.jpeg" alt="Visita a GOLD FIELDS" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/boletin/GFLC.jpeg" alt="Visita a GOLD FIELDS" />
                     </div>
                     <div class="news-content">
                         <h3>Visita Estratégica a GOLD FIELDS - Fortaleciendo Alianzas</h3>
@@ -44,7 +44,7 @@
 
                 <div class="news-item">
                     <div class="news-image">
-                        <img src="<?php echo $basePath; ?>assets/img/boletin/ACEROS.jpeg" alt="Aceros Arequipa - Charla Normativa de Izaje" />
+                        <img src="<?php echo BASE_URL; ?>assets/img/boletin/ACEROS.jpeg" alt="Aceros Arequipa - Charla Normativa de Izaje" />
                     </div>
                     <div class="news-content">
                         <h3>Charla Especializada: Normativa de Inspección de Equipos de Izaje</h3>

@@ -1,364 +1,258 @@
+<?php
+/**
+ * Página de inicio
+ * QPM Servicios Técnicos
+ */
+
+require_once __DIR__ . '/../includes/clients-service.php';
+
+$heroImages = getHeroImages();
+$clientLogos = getClientImages(__DIR__ . '/../assets/img/clients');
+?>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/index.css">
 
-<!-- Hero Section Vanguardista -->
-<section class="hero-modern" id="hero-carousel">
-    <!-- Carrusel de imágenes de fondo -->
-    <div class="hero-carousel">
-        <?php include_once $basePath.'includes/clients-service.php'; $slides = getClientImages(__DIR__.'/../assets/img/hero'); $i=0; foreach ($slides as $img) { $url = $basePath.'assets/img/hero/'.rawurlencode($img); $active = $i===0 ? ' active' : ''; echo '<div class="hero-slide'.$active.'" style="background-image: url(\''.$url.'\');"></div>'; $i++; } ?>
-    </div>
+<?php echo renderHeroSection($heroImages); ?>
+<?php echo renderClientsSection($clientLogos); ?>
+<?php echo renderServicesSection(); ?>
+
+<script src="<?php echo BASE_URL; ?>assets/js/hero-carousel.js"></script>
+
+<?php
+/**
+ * Obtiene las imágenes del hero carousel
+ * @return array<int, string>
+ */
+function getHeroImages(): array {
+    $heroDir = __DIR__ . '/../assets/img/hero';
+    return getImages($heroDir);
+}
+
+/**
+ * Renderiza la sección hero con el carousel
+ * @param array<int, string> $images
+ * @return string
+ */
+function renderHeroSection(array $images): string {
+    $html = '<section class="hero-modern" id="hero-carousel">';
+    $html .= '<div class="hero-carousel">';
     
-    <div class="container">
-        <div class="hero-content">
-        </div>
-    </div>
-    
-    <!-- Indicadores del carrusel -->
-    <div class="carousel-indicators">
-        <?php $count = isset($slides) ? count($slides) : 0; for ($j=0; $j<$count; $j++) { $active = $j===0 ? ' active' : ''; echo '<button class="indicator'.$active.'" data-slide="'.$j.'"></button>'; } ?>
-    </div>
-    
-    <!-- Controles del carrusel -->
-    <div class="carousel-controls">
-        <button class="carousel-btn prev-btn" id="prevBtn">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-btn next-btn" id="nextBtn">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
-</section>
-
-<!-- Sección de Clientes -->
-<section class="clients-section">
-    <div class="container">
-        <div class="clients-header">
-            <h2>Nuestros Clientes</h2>
-            <p>Empresas líderes que confían en nuestros servicios</p>
-        </div>
-        <style>
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc((var(--logo-width) + var(--logo-gap)) * var(--logo-count) * -1)); } }
-        </style>
-        <div class="clients-carousel">
-            <?php include_once $basePath.'includes/clients-service.php'; $imgs = getClientImages(__DIR__.'/../assets/img/clients'); renderClientLogos($imgs, $basePath); ?>
-        </div>
-    </div>
-</section>
-
-<!-- Servicios Grid Moderno -->
-<section class="services-modern">
-    <div class="container">
-        <div class="section-header-modern">
-
-            <h2 class="section-title">Servicios</h2>
-            <p class="section-subtitle">
-                Ponemos a su disposición servicios de valor en múltiples especialidades
-            </p>
-        </div>
-        <style>
-        .service-thumb{width:100%;height:280px;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1.5rem;background:var(--accent-color)}
-        .service-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
-        .services-grid-modern .service-card-modern{animation:none}
-        .services-grid-modern .service-card-modern:hover{transform:none;box-shadow:var(--shadow-soft)}
-        .services-grid-modern .service-card-modern::before{display:none}
-        .services-modern .services-grid-modern{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:2.5rem}
-        .services-modern .service-card-modern{padding:2.25rem}
-        @media(max-width:768px){
-            .services-modern .services-grid-modern{grid-template-columns:1fr;gap:1.5rem}
-            .service-thumb{height:220px}
-            .services-modern .service-card-modern{padding:2rem}
-        }
-        </style>
-        
-        <div class="services-grid-modern">
-            <!-- Confiabilidad y MPd -->
-            <div class="service-card-modern" data-service="predictivo">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/1.jpg" alt="Confiabilidad y MPd">
-                </div>
-                <div class="service-content">
-                    <h3>Confiabilidad y MPd</h3>
-                    <p class="service-tagline">Anticipamos defectos y aseguramos el funcionamiento de tus equipos.</p>
-                    <p class="service-description">
-                        Analizamos datos para detectar anomalías en el funcionamiento de los equipos.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Análisis Vibracional</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Termografía Infrarroja</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Alineamiento de Máquinas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ensayos No Destructivos (END) -->
-            <div class="service-card-modern" data-service="ensayos">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/ensayos.png" alt="Ensayos No Destructivos">
-                </div>
-                <div class="service-content">
-                    <h3>Ensayos No Destructivos (END)</h3>
-                    <p class="service-tagline">Sin integridad no hay éxito.</p>
-                    <p class="service-description">
-                        Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Inspección Visual</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Partículas Magnéticas</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Ultrasonido y Radiografía</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Inspección y Certificación de Equipos -->
-            <div class="service-card-modern" data-service="inspeccion">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/inspeccion.png" alt="Inspección y Certificación de Equipos">
-                </div>
-                <div class="service-content">
-                    <h3>Inspección y Certificación de Equipos</h3>
-                    <p class="service-tagline">No tenemos límites para la inspección de equipos</p>
-                    <p class="service-description">
-                        Evaluamos el funcionamiento de equipos para identificar riesgos potenciales, fallas o defectos.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Equipos de Izaje y Manejo de Cargas</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Recipientes a Presión</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Recipientes a Presión Atmosférica</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Topografía, Geodesia y Medición Láser 3D -->
-            <div class="service-card-modern" data-service="topografia">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/topografia.png" alt="Topografía, Geodesia y Medición Láser 3D">
-                </div>
-                <div class="service-content">
-                    <h3>Topografía, Geodesia y Medición Láser 3D</h3>
-                    <p class="service-tagline">Ponemos a tu alcance alta tecnología, precisión y pasión.</p>
-                    <p class="service-description">
-                        Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Levantamiento Topográfico</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Topografía con drones</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Medición 3D con láser</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Consultoría y Asesoramiento -->
-            <div class="service-card-modern" data-service="consultoria">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/consultorioa.jpeg" alt="Consultoría y Asesoramiento">
-                </div>
-                <div class="service-content">
-                    <h3>Consultoría y Asesoramiento</h3>
-                    <p class="service-tagline">Convertimos tu idea o proyecto en realidad</p>
-                    <p class="service-description">
-                        Desarrollamos soluciones para tu empresa, trabajando juntos de la mejor manera de implementación e inversión.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Integridad Mecánica</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Planes de Inspección</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Control de Calidad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Servicios Especializados -->
-            <div class="service-card-modern" data-service="especializados">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/servicios.png" alt="Servicios Especializados">
-                </div>
-                <div class="service-content">
-                    <h3>Servicios Especializados</h3>
-                    <p class="service-tagline">Somos los expertos</p>
-                    <p class="service-description">
-                        Desarrollamos tus proyectos con eficiencia, seguridad y calidad.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Tratamiento Térmico</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Montajes Críticos</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Mantenimiento de Grúas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Alquiler y Venta de Equipos & Calibraciones -->
-            <div class="service-card-modern" data-service="alquiler">
-                <div class="service-thumb">
-                    <img src="<?php echo $basePath; ?>assets/img/servicios/alquiler.jpg" alt="Alquiler y Venta de Equipos & Calibraciones">
-                </div>
-                <div class="service-content">
-                    <h3>Alquiler y Venta de Equipos & Calibraciones</h3>
-                    <p class="service-tagline">Tecnología a tu alcance, sin complicaciones.</p>
-                    <p class="service-description">
-                        Venta y alquiler de Equipos de Inspección y Gestión de Calibración Electrónica fuera de Perú.
-                    </p>
-                    <div class="service-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Venta de Equipos</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Alquiler de Equipos</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Calibraciones en el extranjero</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- JavaScript para el carrusel del hero -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    
-    let currentSlide = 0;
-    let slideInterval;
-    
-    // Función para mostrar slide específico
-    function showSlide(index) {
-        // Remover clase active de todos los slides e indicadores
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
-        
-        // Agregar clase active al slide e indicador actual
-        slides[index].classList.add('active');
-        indicators[index].classList.add('active');
-        
-        currentSlide = index;
+    foreach ($images as $index => $image) {
+        $activeClass = $index === 0 ? ' active' : '';
+        $imageUrl = BASE_URL . 'assets/img/hero/' . rawurlencode($image);
+        $html .= '<div class="hero-slide' . $activeClass . '" style="background-image: url(\'' . $imageUrl . '\');"></div>';
     }
     
-    // Función para ir al siguiente slide
-    function nextSlide() {
-        const next = (currentSlide + 1) % slides.length;
-        showSlide(next);
+    $html .= '</div>';
+    $html .= '<div class="container"><div class="hero-content"></div></div>';
+    $html .= renderCarouselIndicators(count($images));
+    $html .= renderCarouselControls();
+    $html .= '</section>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza los indicadores del carousel
+ * @param int $count
+ * @return string
+ */
+function renderCarouselIndicators(int $count): string {
+    if ($count === 0) {
+        return '';
     }
     
-    // Función para ir al slide anterior
-    function prevSlide() {
-        const prev = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prev);
+    $html = '<div class="carousel-indicators">';
+    
+    for ($i = 0; $i < $count; $i++) {
+        $activeClass = $i === 0 ? ' active' : '';
+        $html .= '<button class="indicator' . $activeClass . '" data-slide="' . $i . '"></button>';
     }
     
-    // Función para iniciar el carrusel automático
-    function startCarousel() {
-        slideInterval = setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
+    $html .= '</div>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza los controles del carousel
+ * @return string
+ */
+function renderCarouselControls(): string {
+    return '<div class="carousel-controls">' .
+           '<button class="carousel-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>' .
+           '<button class="carousel-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>' .
+           '</div>';
+}
+
+/**
+ * Renderiza la sección de clientes
+ * @param array<int, string> $images
+ * @return string
+ */
+function renderClientsSection(array $images): string {
+    $html = '<section class="clients-section">';
+    $html .= '<div class="container">';
+    $html .= '<div class="clients-header">';
+    $html .= '<h2>Nuestros Clientes</h2>';
+    $html .= '<p>Empresas líderes que confían en nuestros servicios</p>';
+    $html .= '</div>';
+    $html .= '<div class="clients-carousel">';
+    ob_start();
+    renderClientLogos($images, BASE_URL);
+    $html .= (string) ob_get_clean();
+    $html .= '</div>';
+    $html .= '</div>';
+    $html .= '<style>@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc((var(--logo-width) + var(--logo-gap)) * var(--logo-count) * -1))}}</style>';
+    $html .= '</section>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza la sección de servicios
+ * @return string
+ */
+function renderServicesSection(): string {
+    $services = getServicesData();
+    
+    $html = '<section class="services-modern">';
+    $html .= '<div class="container">';
+    $html .= '<div class="section-header-modern">';
+    $html .= '<h2 class="section-title">Servicios</h2>';
+    $html .= '<p class="section-subtitle">Ponemos a su disposición servicios de valor en múltiples especialidades</p>';
+    $html .= '</div>';
+    $html .= renderServiceStyles();
+    $html .= '<div class="services-grid-modern">';
+    
+    foreach ($services as $service) {
+        $html .= renderHomeServiceCard($service);
     }
     
-    // Función para detener el carrusel automático
-    function stopCarousel() {
-        clearInterval(slideInterval);
+    $html .= '</div>';
+    $html .= '</div>';
+    $html .= '</section>';
+    
+    return $html;
+}
+
+/**
+ * Renderiza los estilos específicos de servicios
+ * @return string
+ */
+function renderServiceStyles(): string {
+    return '<style>' .
+           '.service-thumb{width:100%;height:220px;border-radius:14px;overflow:hidden;margin-bottom:1.2rem;background:var(--accent-color)}' .
+           '.service-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transition:transform .35s ease}' .
+           '.services-grid-modern .service-card-modern{animation:none}' .
+           '.services-grid-modern .service-card-modern:hover{transform:translateY(-6px)}' .
+           '.services-grid-modern .service-card-modern:hover .service-thumb img{transform:scale(1.04)}' .
+           '.services-modern .services-grid-modern{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:1.5rem}' .
+           '.services-modern .service-card-modern{padding:1.2rem}' .
+           '@media(max-width:768px){' .
+           '.services-modern .services-grid-modern{grid-template-columns:1fr;gap:1.5rem}' .
+           '.service-thumb{height:200px}' .
+           '.services-modern .service-card-modern{padding:1rem}' .
+           '}' .
+           '</style>';
+}
+
+/**
+ * Renderiza una tarjeta de servicio para la página de inicio
+ * @param array<string, mixed> $service
+ * @return string
+ */
+function renderHomeServiceCard(array $service): string {
+    $html = '<article class="service-card-modern" data-service="' . $service['id'] . '">';
+    $html .= '<div class="service-thumb">';
+    $html .= '<img src="' . BASE_URL . 'assets/img/servicios/' . $service['image'] . '" alt="' . $service['title'] . '">';
+    $html .= '</div>';
+    $html .= '<div class="service-content">';
+    $html .= '<h3>' . $service['title'] . '</h3>';
+    $html .= '<p class="service-tagline">' . $service['tagline'] . '</p>';
+    $html .= '<p class="service-description">' . $service['description'] . '</p>';
+    $html .= '<div class="service-benefits">';
+    
+    foreach ($service['benefits'] as $benefit) {
+        $html .= '<div class="benefit-item"><i class="fas fa-check-circle"></i><span>' . $benefit . '</span></div>';
     }
     
-    // Event listeners para los controles
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopCarousel();
-        startCarousel(); // Reiniciar el timer
-    });
+    $html .= '</div>';
+    $html .= '</div>';
+    $html .= '</article>';
     
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopCarousel();
-        startCarousel(); // Reiniciar el timer
-    });
-    
-    // Event listeners para los indicadores
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            showSlide(index);
-            stopCarousel();
-            startCarousel(); // Reiniciar el timer
-        });
-    });
-    
-    // Pausar carrusel al hacer hover sobre el hero
-    const heroSection = document.getElementById('hero-carousel');
-    heroSection.addEventListener('mouseenter', stopCarousel);
-    heroSection.addEventListener('mouseleave', startCarousel);
-    
-    // Iniciar el carrusel automático
-    startCarousel();
-    
-    // Soporte para navegación con teclado
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-            stopCarousel();
-            startCarousel();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-            stopCarousel();
-            startCarousel();
-        }
-    });
-});
-</script>
+    return $html;
+}
+
+/**
+ * Obtiene los datos de los servicios
+ * @return array<int, array<string, mixed>>
+ */
+function getServicesData(): array {
+    return [
+        [
+            'id' => 'predictivo',
+            'page' => 'MPd',
+            'title' => 'Confiabilidad y MPd',
+            'tagline' => 'Anticipamos defectos y aseguramos el funcionamiento de tus equipos.',
+            'description' => 'Analizamos datos para detectar anomalías en el funcionamiento de los equipos.',
+            'image' => '1.jpg',
+            'benefits' => ['Análisis Vibracional', 'Termografía Infrarroja', 'Alineamiento de Máquinas']
+        ],
+        [
+            'id' => 'ensayos',
+            'page' => 'ensayos',
+            'title' => 'Ensayos No Destructivos (END)',
+            'tagline' => 'Sin integridad no hay éxito.',
+            'description' => 'Evaluamos la integridad y las propiedades de materiales o componentes sin dañar el objeto.',
+            'image' => 'ensayos.png',
+            'benefits' => ['Inspección Visual', 'Partículas Magnéticas', 'Ultrasonido y Radiografía']
+        ],
+        [
+            'id' => 'inspeccion',
+            'page' => 'inspeccion',
+            'title' => 'Inspección y Certificación de Equipos',
+            'tagline' => 'No tenemos límites para la inspección de equipos',
+            'description' => 'Evaluamos el funcionamiento de equipos para identificar riesgos potenciales, fallas o defectos.',
+            'image' => 'inspeccion.png',
+            'benefits' => ['Equipos de Izaje y Manejo de Cargas', 'Recipientes a Presión', 'Recipientes a Presión Atmosférica']
+        ],
+        [
+            'id' => 'topografia',
+            'page' => 'topografia',
+            'title' => 'Topografía, Geodesia y Medición Láser 3D',
+            'tagline' => 'Ponemos a tu alcance alta tecnología, precisión y pasión.',
+            'description' => 'Brindamos soluciones tecnológicas en topografía y geodesia en diversos proyectos a nivel nacional.',
+            'image' => 'topografia.png',
+            'benefits' => ['Levantamiento Topográfico', 'Topografía con drones', 'Medición 3D con láser']
+        ],
+        [
+            'id' => 'consultoria',
+            'page' => 'consultoria',
+            'title' => 'Consultoría y Asesoramiento',
+            'tagline' => 'Convertimos tu idea o proyecto en realidad',
+            'description' => 'Desarrollamos soluciones para tu empresa, trabajando juntos de la mejor manera de implementación e inversión.',
+            'image' => 'consultorioa.jpeg',
+            'benefits' => ['Integridad Mecánica', 'Planes de Inspección', 'Control de Calidad']
+        ],
+        [
+            'id' => 'especializados',
+            'page' => 'especializados',
+            'title' => 'Servicios Especializados',
+            'tagline' => 'Somos los expertos',
+            'description' => 'Desarrollamos tus proyectos con eficiencia, seguridad y calidad.',
+            'image' => 'servicios.png',
+            'benefits' => ['Tratamiento Térmico', 'Montajes Críticos', 'Mantenimiento de Grúas']
+        ],
+        [
+            'id' => 'alquiler',
+            'page' => 'alquiler',
+            'title' => 'Alquiler y Venta de Equipos & Calibraciones',
+            'tagline' => 'Tecnología a tu alcance, sin complicaciones.',
+            'description' => 'Venta y alquiler de Equipos de Inspección y Gestión de Calibración Electrónica fuera de Perú.',
+            'image' => 'alquiler.jpg',
+            'benefits' => ['Venta de Equipos', 'Alquiler de Equipos', 'Calibraciones en el extranjero']
+        ],
+    ];
+}

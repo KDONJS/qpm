@@ -1,57 +1,31 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitizar datos del formulario
-    $nombre = htmlspecialchars(trim($_POST['nombre']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $telefono = htmlspecialchars(trim($_POST['telefono']));
-    $servicio = htmlspecialchars(trim($_POST['servicio']));
-    $mensaje = htmlspecialchars(trim($_POST['mensaje']));
-    
-    // Validaciones básicas
-    $errores = [];
-    
-    if (empty($nombre)) {
-        $errores[] = "El nombre es requerido";
-    }
-    
-    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errores[] = "Email válido es requerido";
-    }
-    
-    if (empty($mensaje)) {
-        $errores[] = "El mensaje es requerido";
-    }
-    
-    if (empty($errores)) {
-        // Aquí puedes agregar el código para enviar el email
-        // Por ahora, solo mostraremos un mensaje de éxito
-        
-        $exito = true;
-        $mensaje_resultado = "¡Gracias por contactarnos! Hemos recibido tu mensaje y te responderemos pronto.";
-    } else {
-        $exito = false;
-        $mensaje_resultado = "Por favor, corrige los siguientes errores: " . implode(", ", $errores);
-    }
-} else {
-    header("Location: contactenos.php");
-    exit();
-}
+/**
+ * Procesamiento del formulario de contacto
+ * QPM Servicios Técnicos
+ */
 
-include '../includes/header.php';
+declare(strict_types=1);
+
+require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../includes/functions.php';
+
+$result = processContactForm();
+
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <main>
     <section class="page-hero">
         <div class="container">
-            <h1><?php echo $exito ? 'Mensaje Enviado' : 'Error en el Formulario'; ?></h1>
+            <h1><?php echo $result['success'] ? 'Mensaje Enviado' : 'Error en el Formulario'; ?></h1>
         </div>
     </section>
 
     <section class="contact-result">
         <div class="container">
-            <div class="result-message <?php echo $exito ? 'success' : 'error'; ?>">
-                <p><?php echo $mensaje_resultado; ?></p>
-                <a href="contactenos.php" class="btn btn-primary">Volver al Formulario</a>
+            <div class="result-message <?php echo $result['success'] ? 'success' : 'error'; ?>">
+                <p><?php echo e($result['message']); ?></p>
+                <a href="<?php echo getPageUrl('contactenos'); ?>" class="btn btn-primary">Volver al Formulario</a>
             </div>
         </div>
     </section>
@@ -88,4 +62,73 @@ include '../includes/header.php';
 }
 </style>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
+
+<?php
+/**
+ * Procesa el formulario de contacto
+ * @return array{success: bool, message: string}
+ */
+function processContactForm(): array {
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        redirect('contactenos');
+    }
+
+    $formData = sanitizeFormData($_POST);
+    $errors = validateContactForm($formData);
+
+    if (!empty($errors)) {
+        return [
+            'success' => false,
+            'message' => 'Por favor, corrige los siguientes errores: ' . implode(', ', $errors)
+        ];
+    }
+
+    // TODO: Implementar envío de email aquí
+    // sendContactEmail($formData);
+
+    return [
+        'success' => true,
+        'message' => '¡Gracias por contactarnos! Hemos recibido tu mensaje y te responderemos pronto.'
+    ];
+}
+
+/**
+ * Sanitiza los datos del formulario
+ * @param array<string, mixed> $data
+ * @return array<string, string>
+ */
+function sanitizeFormData(array $data): array {
+    $fields = ['nombre', 'email', 'telefono', 'servicio', 'mensaje'];
+    $sanitized = [];
+    
+    foreach ($fields as $field) {
+        $value = $data[$field] ?? '';
+        $sanitized[$field] = htmlspecialchars(trim((string) $value), ENT_QUOTES, 'UTF-8');
+    }
+    
+    return $sanitized;
+}
+
+/**
+ * Valida los datos del formulario de contacto
+ * @param array<string, string> $data
+ * @return array<int, string>
+ */
+function validateContactForm(array $data): array {
+    $errors = [];
+
+    if (empty($data['nombre'])) {
+        $errors[] = 'El nombre es requerido';
+    }
+
+    if (empty($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email válido es requerido';
+    }
+
+    if (empty($data['mensaje'])) {
+        $errors[] = 'El mensaje es requerido';
+    }
+
+    return $errors;
+}

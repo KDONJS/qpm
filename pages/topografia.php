@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -30,7 +33,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -44,23 +47,36 @@ body {
 
 /* Secciones */
 .services-modern {
+    position: relative;
     padding: 4rem 0;
-    background: var(--light-bg);
+    background: linear-gradient(180deg, #f5f9ff 0%, #f9fcff 100%);
+}
+
+.services-modern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 20%, rgba(38, 198, 218, 0.14) 0, transparent 32%),
+                      radial-gradient(circle at 80% 0%, rgba(47, 66, 144, 0.08) 0, transparent 30%);
+    pointer-events: none;
 }
 
 .section-header-modern {
-    margin-bottom: 4rem;
-    max-width: 900px;
+    margin-bottom: 3rem;
+    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .section-header-modern h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
     color: var(--dark-blue);
-    margin-bottom: 2rem;
+    margin-bottom: 1.1rem;
     position: relative;
 }
 
@@ -70,37 +86,64 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 70px;
     height: 4px;
     background: var(--teal);
     border-radius: 2px;
 }
 
 .section-header-modern p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-light);
-    line-height: 1.8;
-    max-width: 700px;
+    line-height: 1.7;
+    max-width: 620px;
     margin: 0 auto;
 }
 
 /* Grid de Servicios */
 .services-grid-modern {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .service-card-modern {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(180deg, #ffffff 0%, #fdfefe 100%);
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(20, 34, 66, 0.08);
+    border: 1px solid #d9e4f3;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+}
+
+.service-thumb-modern {
+    position: relative;
+    margin: 0;
+    height: 205px;
+    background: #eef3f8;
+    overflow: hidden;
+}
+
+.service-thumb-modern::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(17, 28, 46, 0.35) 100%);
+}
+
+.service-thumb-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
 }
 
 .service-card-modern::before {
@@ -109,7 +152,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: var(--green);
     transform: scaleX(0);
     transition: transform 0.3s ease;
@@ -120,43 +163,32 @@ body {
 }
 
 .service-card-modern:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-medium);
 }
 
-.service-icon-modern {
-    width: 70px;
-    height: 70px;
-    background: var(--green);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-soft);
-}
-
-.service-icon-modern i {
-    font-size: 1.8rem;
-    color: var(--white);
+.service-card-modern:hover .service-thumb-modern img {
+    transform: scale(1.04);
 }
 
 .service-content {
+    padding: 1.15rem 1.25rem 1.35rem;
     text-align: left;
 }
 
 .service-content h3 {
-    font-size: 1.4rem;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.45rem;
     line-height: 1.3;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
     .services-grid-modern {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -169,27 +201,21 @@ body {
         margin-bottom: 3rem;
     }
     
-    .section-header-modern h2 {
-        font-size: 2rem;
-    }
-    
     .services-grid-modern {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.1rem;
     }
     
     .service-card-modern {
-        padding: 2rem;
         min-height: auto;
     }
-    
-    .service-icon-modern {
-        width: 60px;
-        height: 60px;
+
+    .service-thumb-modern {
+        height: 180px;
     }
-    
-    .service-icon-modern i {
-        font-size: 1.5rem;
+
+    .service-content {
+        padding: 1rem 1rem 1.2rem;
     }
 }
 
@@ -198,17 +224,12 @@ body {
         padding: 0 0.5rem;
     }
     
-    .service-card-modern {
-        padding: 1.5rem;
+    .service-thumb-modern {
+        height: 165px;
     }
-    
-    .service-icon-modern {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .service-icon-modern i {
-        font-size: 1.5rem;
+
+    .service-content h3 {
+        font-size: 1rem;
     }
 }
 
@@ -267,59 +288,46 @@ html {
             </div>
             
             <div class="services-grid-modern">
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Levantamiento Topográfico en General</h3>
-                    </div>
-                </div>
-                
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Medición de superficies topográficas</h3>
-                    </div>
-                </div>
-                
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Topografía en obra y construcción</h3>
-                    </div>
-                </div>
-                
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Colocación de puntos geodésicos</h3>
-                    </div>
-                </div>
-                
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fa fa-plane" aria-hidden="true"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Topografía con drones</h3>
-                    </div>
-                </div>
-                
-                <div class="service-card-modern">
-                    <div class="service-icon-modern">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Medición 3D de estructuras con láser tracker</h3>
-                    </div>
-                </div>
+                <?php
+                $topographyServices = [
+                    [
+                        'title' => 'Levantamiento Topográfico en General',
+                        'image' => 'D_1_Levantamiento Topografico en General.jpg',
+                    ],
+                    [
+                        'title' => 'Medición de superficies topográficas',
+                        'image' => 'D_2_Medición de Superficie Topográfica.JPG',
+                    ],
+                    [
+                        'title' => 'Topografía en obra y construcción',
+                        'image' => 'D_3_Topografia en Obra y Construccion.jpeg',
+                    ],
+                    [
+                        'title' => 'Colocación de puntos geodésicos',
+                        'image' => 'D_4_Colocación de Puntos Geodesicos.jpg',
+                    ],
+                    [
+                        'title' => 'Topografía con drones',
+                        'image' => 'D_5_Topografia con Drones.avif',
+                    ],
+                    [
+                        'title' => 'Medición 3D de estructuras con láser tracker',
+                        'image' => 'D_6_Medición 3D de estructuras.jpg',
+                    ],
+                ];
+
+                foreach ($topographyServices as $service):
+                    $imageUrl = BASE_URL . 'assets/img/topografia/' . rawurlencode($service['image']);
+                ?>
+                    <article class="service-card-modern">
+                        <div class="service-thumb-modern">
+                            <img src="<?php echo e($imageUrl); ?>" alt="<?php echo e($service['title']); ?>" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3><?php echo e($service['title']); ?></h3>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
